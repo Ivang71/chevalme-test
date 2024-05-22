@@ -47,22 +47,24 @@ const ScrollingSections = () => {
                         <div>luxury</div>
                         <div>re-imagined</div>
                     </div>
-                    <Image src='/chevalme-test/images/car-home.png' alt='Home and a car' width={1404} height={885} className='absolute top-[-320px] left-[47px]' />
+                    <Image src='/chevalme-test/images/car-home.png' alt='Home and a car' width={1404} height={885} className='absolute top-[-320px] left-[47px] pointer-events-none' />
                     <div className='mt-[136px] text-sm'>
                         <span className={`${s.projects} ${s.projActive} mr-[89px]`}>Ready</span>
                         <span className={`${s.projects}`}>New Projects</span>
                     </div>
                     <div className='mt-[28px] flex text-sm'>
-                        <div>Buy</div>
-                        <Image src='/chevalme-test/icons/expand_more.svg' alt='Arrow down' width={32} height={32} className='mr-[20px] mt-[-2px]' />
-                        <div className='mr-[18px]'>Community or Building</div>
+                        <button className='py-3 pl-2 grid place-items-center grid-cols-2 gap-1 rounded-3xl hover:bg-white/30 active:bg-white/60 hover:text-gray-700 active:text-black transition duration-200 ease-in-out'>
+                            Buy
+                            <Image src='/chevalme-test/icons/expand_more.svg' alt='Arrow down' width={32} height={32} className='ml-[-10px] mr-[15px]'/>
+                        </button>
+                        <button className='mr-[13px] p-3 rounded-3xl hover:bg-white/30 active:bg-white/60 hover:text-gray-700 active:text-black transition duration-200 ease-in-out'>Community or Building</button>
                         <div className={`${s.line}`} />
-                        <div className='mx-[24px]'>Location</div>
+                        <button className='mx-[19px] p-3 rounded-3xl hover:bg-white/30 active:bg-white/60 hover:text-gray-700 active:text-black transition duration-200 ease-in-out'>Location</button>
                         <div className={`${s.line}`} />
-                        <div className='mx-[26px]'>Price</div>
+                        <button className='mx-[21px] p-3 rounded-3xl hover:bg-white/30 active:bg-white/60 hover:text-gray-700 active:text-black transition duration-200 ease-in-out'>Price</button>
                         <div className={`${s.line}`} />
-                        <div className='ml-[27px] mr-[4px]'>Search</div>
-                        <Image src='/chevalme-test/icons/search.svg' alt='Search icon' width={17} height={17} className='mr-[20px] mt-[-4px]' />
+                        <button className='ml-[22px] mr-[4px] p-3 rounded-3xl hover:bg-white/30 active:bg-white/60 hover:text-gray-700 active:text-black transition duration-200 ease-in-out'>Search</button>
+                        <Image src='/chevalme-test/icons/search.svg' alt='Search icon' width={17} height={17} className='mr-[20px] mt-[-8px]' />
                     </div>
                 </div>
 
@@ -225,6 +227,6 @@ const ScrollingSections = () => {
             </div>
         </>
     )
-};
+}
 
 export default ScrollingSections
