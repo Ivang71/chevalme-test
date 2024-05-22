@@ -17,4 +17,19 @@
     background: #EDDFD0;
 }
 
+.footerTint {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(147, 130, 112, 0.5), rgba(147, 130, 112, 0));
+}
+
+.emailUnderline {
+    width: 400px;
+    height: 20px;
+    border-bottom: 1px solid #EDDFD0;
+}
+
+
 

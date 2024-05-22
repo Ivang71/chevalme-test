@@ -18,7 +18,36 @@ export default async function Page() {
             </div>
             <Image src='/chevalme-test/images/bg.jpeg' alt='Background' width={1934} height={1154} className='z-[-50] fixed top-0 w-full h-full' />
             <ScrollingSections />
-            <footer className='z-[100] relative h-[609px]' style={{ backgroundImage: 'url("/chevalme-test/images/ft-bg.jpeg")' }}></footer>
+            <footer className={`relative z-[100] h-[477px] bg-cover`} style={{ backgroundImage: 'url("/chevalme-test/images/ft-bg.jpeg")' }}>
+                <div className={`${styles.footerTint}`}></div>
+                <div className='z-50'>
+                    <div>
+                        <div className='w-[391px] gotham text-[25px] font-[200] leading-[164%]'>A World of Leading Expertise Exclusively yours</div>
+                        <div className='w-[508px] mt-[38px] text-[25px] font-[500] leading-[147%]'>Sign up for our newsletter to stay updated with what’s new in UAE real estate</div>
+                        <div>
+                            <div className='mt-[19px] text-sm'>Enter your email</div>
+                            {/* <input type="email" className='appearance-none' /> */}
+                            <div className={`${styles.emailUnderline}`}></div>
+                            <button className='py-[10px] px-[36px] bg-[#938270] rounded-[40px]'>Sign Up</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </footer>
         </div>
     )
 }
