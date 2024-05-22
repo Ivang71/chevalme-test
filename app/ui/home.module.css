@@ -22,13 +22,25 @@
     z-index: -1;
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(147, 130, 112, 0.5), rgba(147, 130, 112, 0));
+    background: linear-gradient(to right, rgba(147, 130, 112, 0.7), rgba(147, 130, 112, 0));
 }
 
 .emailUnderline {
     width: 400px;
     height: 20px;
-    border-bottom: 1px solid #EDDFD0;
+    border-bottom: 1px solid rgba(237, 223, 208, 0.5);
+}
+
+.footerLine {
+    margin-left: 80px;
+    width: calc(100% - 160px);
+    height: 1px;
+    background: #EDDFD0;
+    opacity: .5;
+}
+
+.designedBy {
+
 }
 
 
