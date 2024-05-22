@@ -37,34 +37,3 @@
     font-family: "Gotham";
 }
 
-.projects {
-    position: relative;
-}
-
-.projects::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 1px;
-    width: 117px;
-    height: 1px;
-    border-radius: 2px;
-    background: #EDDFD0;
-}
-
-.projActive::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 1px;
-    width: 117px;
-    height: 3px;
-    border-radius: 2px;
-    background: #EDDFD0;    
-}
-
-.line {
-    width: 1px;
-    height: 31px;
-    background: #EDDFD0;   
-}
