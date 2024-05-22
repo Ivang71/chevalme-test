@@ -20,7 +20,7 @@ const ScrollingSections = () => {
         () => {
             const slides = gsap.utils.toArray('.horizontalPanel')
             gsap.to(slides, {
-                xPercent: -112 * (slides.length - 1),
+                xPercent: -100* (slides.length - 1),
                 ease: 'none',
                 scrollTrigger: {
                     trigger: horizontalSection.current,
@@ -70,7 +70,7 @@ const ScrollingSections = () => {
                     </div>
                 </div>
 
-                <div className="horizontalPanel mt-[-48px] ml-[250px]">
+                <div className="horizontalPanel mt-[-48px] ml-[100px]">
                     <div className='flex gap-8'>
                         <div className='gotham text-[69px] leading-[94%] font-[700]'>
                             <div>Featured</div>
@@ -165,7 +165,7 @@ const ScrollingSections = () => {
                     </div>
                 </div>
 
-                <div className="horizontalPanel mt-[-48px] ml-[250px]">
+                <div className="horizontalPanel mt-[-48px]">
                     <div className='gotham'>
                         <div className='text-[69px] leading-[94%] font-[700]'>
                             <div>Our&nbsp;Services</div>
@@ -207,7 +207,7 @@ const ScrollingSections = () => {
                     </div>
                 </div>
 
-                <div className="horizontalPanel mt-[-48px] ml-[250px]">
+                <div className="horizontalPanel mt-[-48px]">
                     <div className='text-[69px] leading-[123%] font-[700]'>
                         <div>Instagram</div>
                     </div>
