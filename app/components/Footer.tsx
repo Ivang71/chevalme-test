@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from '@/app/ui/home.module.css'
 
-const Footer = () => {
+export const Footer = () => {
     return (
 
         <footer className={`relative z-[100] h-[477px] bg-cover`} style={{ backgroundImage: 'url("/chevalme-test/images/ft-bg.jpeg")' }}>
@@ -60,5 +60,3 @@ const Footer = () => {
         </footer>
     )
 }
-
-export default Footer

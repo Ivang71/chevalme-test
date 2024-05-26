@@ -27,7 +27,7 @@ const Header = () => {
 
 
     return (
-        <div ref={stickyHeaderRef} className={`h-[340px] sticky top-0 pt-[89px] px-[85px]`}>
+        <div ref={stickyHeaderRef} className={`h-[340px] pt-[89px] px-[85px]`}>
             <Image src='/chevalme-test/texts/slim.svg' alt='Slim Properties logo' width={142} height={71} className='ml-[-4px]' />
             <nav className='mt-[57px] flex gap-[38px] text-sm'>
                 <div className={styles.navActive}>Home</div>

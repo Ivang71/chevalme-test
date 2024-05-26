@@ -1,0 +1,7 @@
+export * as Header from './Header'
+export { HomeHero } from './HomeHero'
+export { FeaturedProperties } from './FeaturedProperties'
+export { OurServices } from './OurServices'
+export { Instagram } from './Instagram'
+export { ScrollingSections } from './ScrollingSections'
+export { Footer } from './Footer'
