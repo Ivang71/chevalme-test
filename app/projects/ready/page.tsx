@@ -12,8 +12,8 @@ export default async function ReadyProjectsPage() {
                     <Image src='/chevalme-test/images/organic-house.webp' alt='Home and a car' width={1404} height={885} className='z-[-30] absolute top-[43%] translate-y-[-25%] sm:translate-y-[-45%] lg:translate-y-[-60%] pointer-events-none' />
                 </div>
             </div>
-            <div className='text-[12px] mt-[50px] flex-wrap'>
-                <div className='flex gap-4'>
+            <div className='text-[12px] mt-[50px]'>
+                <div className='flex gap-4 flex-wrap'>
                     <span className={`${s.propFilter}`}>Price Range</span>
                     <span className={`${s.propFilter}`}>Bedroom</span>
                     <span className={`${s.propFilter}`}>Bathroom</span>
