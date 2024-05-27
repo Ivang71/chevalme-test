@@ -2,23 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    /* tw gray 800 */
-    --gradient-start-color: #1f2937;
-    --box-shadow-color: #000;
-    --cta-text-color: #fff;
-}
-
-@media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-        /* ts gray 400 */
-        --gradient-start-color: #fff;
-        --box-shadow-color: #aaa;
-        --cta-text-color: #000;
-    }
-}
-
 /* ::selection {
     color: black;
     background: #31dac3;
