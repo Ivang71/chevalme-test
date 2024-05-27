@@ -69,6 +69,12 @@
     border-bottom: #eddfd0 solid 1px;
 }
 
+.upcomingSearch {
+    width: 291px;
+    padding: 4px 0 4px 0;
+    border-bottom: #eddfd0 solid 1px;
+}
+
 .propPic {
     position: relative;
 }

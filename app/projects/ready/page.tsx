@@ -9,7 +9,8 @@ export default async function ReadyProjectsPage() {
                 <div className='gotham text-[40px] sm:text-[69px] leading-[88px]'>
                     <div>Ready</div>
                     <div>Projects</div>
-                    <Image src='/chevalme-test/images/organic-house.webp' alt='Home and a car' width={1404} height={885} className='z-[-30] absolute top-[43%] translate-y-[-25%] sm:translate-y-[-45%] lg:translate-y-[-60%] pointer-events-none' />
+                    <Image src='/chevalme-test/images/organic-house.webp' alt='Home and a car' width={1404} height={885}
+                        className='z-[-30] absolute top-[43%] right-0 translate-y-[-25%] sm:translate-y-[-45%] lg:translate-y-[-60%] max-w-[95vw] sm:max-w-none pointer-events-none' />
                 </div>
             </div>
             <div className='text-[12px] mt-[50px]'>
