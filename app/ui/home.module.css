@@ -8,13 +8,21 @@
 
 .navActive::after {
     content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 1px;
-    width: 30px;
+    display: block;
+    width: 40px; /* Adjust width as needed */
     height: 3px;
-    border-radius: 2px;
-    background: #EDDFD0;
+    background-color: #EDDFD0;
+    margin: 0 auto; /* Center the border element */
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Add transition property */
+    transition: transform 0.3s ease-in-out; /* Adjust duration and easing as needed */
+}
+
+.navActive:hover::after {
+    transform: translateX(-50%) scaleX(1.3); /* Adjust scale for desired underline extension */
 }
 
 .footerTint {
