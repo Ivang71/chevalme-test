@@ -1,16 +1,15 @@
 import Image from 'next/image'
 import s from '@/app/ui/scrollSection.module.css'
-import '@/app/ui/t.css'
 
 export const FeaturedProperties = () => {
     return (
-        <div className="horizontalPanel mt-[-48px] ml-[100px]">
-            <div className='flex gap-8'>
-                <div className='gotham text-[69px] leading-[94%] font-[700]'>
+        <div className="">
+            <div className='flex flex-wrap gap-8'>
+                <div className='gotham text-[40px] sm:text-[69px] leading-[94%] font-[700]'>
                     <div>Featured</div>
                     <div>Properties</div>
                 </div>
-                <div className='text-[12px] mt-[39px]'>
+                <div className='text-[12px] mt-[39px] flex-wrap'>
                     <div className='flex'>
                         <div className={`${s.prop} ${s.propActive}`}>Villas</div>
                         <span className={`${s.prop}`}>Apartments</span>
@@ -23,7 +22,7 @@ export const FeaturedProperties = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex'>
+            <div className='flex flex-wrap'>
                 <div className={`${s.propPic} mt-[43px] w-[304px]`}>
                     <Image src='/chevalme-test/images/property.jpg' alt='Photo of a property' width={304} height={293} />
                     <div className='mt-[15px] ml-[10px]'>

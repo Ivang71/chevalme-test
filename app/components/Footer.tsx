@@ -4,12 +4,12 @@ import styles from '@/app/ui/home.module.css'
 export const Footer = () => {
     return (
 
-        <footer className={`relative z-[100] h-[477px] bg-cover`} style={{ backgroundImage: 'url("/chevalme-test/images/ft-bg.jpeg")' }}>
+        <footer className={`relative z-[100] min-[1440px]-h-[477px] bg-cover`} style={{ backgroundImage: 'url("/chevalme-test/images/ft-bg.jpeg")' }}>
             <div className={`${styles.footerTint}`}></div>
-            <div className='z-50 px-[80px] pt-[91px] flex'>
-                <div>
-                    <div className='w-[391px] gotham text-[25px] font-[200] leading-[164%]'>A World of Leading Expertise Exclusively yours</div>
-                    <div className='w-[508px] mt-[38px] text-[25px] font-[500] leading-[147%]'>Sign up for our newsletter to stay updated with what’s new in UAE real estate</div>
+            <div className='z-50 px-[3vw] sm:px-[80px] pt-[91px] flex flex-wrap gap-y-10'>
+                <div className='max-w-full'>
+                    <div className='sm:w-[391px] gotham text-[25px] font-[200] leading-[164%]'>A World of Leading Expertise Exclusively yours</div>
+                    <div className='sm:w-[508px] mt-[38px] text-[25px] font-[500] leading-[147%]'>Sign up for our newsletter to stay updated with what’s new in UAE real estate</div>
                     <div>
                         <div className='mt-[19px] text-sm'>Enter your email</div>
                         {/* <input type="email" className='appearance-none' /> */}
