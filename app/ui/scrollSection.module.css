@@ -63,6 +63,12 @@
     border-bottom: #eddfd0 solid 3px;
 }
 
+.propFilter {
+    width: 135px;
+    padding: 4px 0 4px 0;
+    border-bottom: #eddfd0 solid 1px;
+}
+
 .propPic {
     position: relative;
 }

@@ -8,7 +8,7 @@ export const HomeHero = () => {
                 <div>Timeless</div>
                 <div>luxury</div>
                 <div>re-imagined</div>
-                <Image src='/chevalme-test/images/car-home.png' alt='Home and a car' width={1404} height={885} className='z-[-30] absolute top-[50%] translate-y-[-25%] sm:translate-y-[-45%] lg:translate-y-[-60%] pointer-events-none' />
+                <Image src='/chevalme-test/images/car-home.webp' alt='Home and a car' width={1404} height={885} className='z-[-30] absolute top-[50%] translate-y-[-25%] sm:translate-y-[-45%] lg:translate-y-[-60%] pointer-events-none' />
             </div>
             <div className='mt-[136px] text-sm'>
                 <span className={`${s.projects} ${s.projActive} mr-[89px]`}>Ready</span>
