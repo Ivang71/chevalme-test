@@ -1,9 +1,11 @@
 import '@/app/ui/global.css'
+import Image from 'next/image'
 import { Metadata } from 'next'
+import { Header, Footer } from '@/app/components'
 
 export const metadata: Metadata = {
-    title: 'Chevalme Test',
-    description: 'Artem Tolochkov the frontend dev.',
+    title: 'Slim Properties',
+    description: 'The ultimate real estate agency in UAE.',
     metadataBase: new URL('https://ivang71.github.io'),
 }
 
@@ -14,7 +16,18 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={` antialiased`}>{children}</body>
+            <body>
+                <div className='text-[#eddfd0] helveticaNeue'>
+                    <Header />
+                    <Image src='/chevalme-test/images/bg.jpeg' alt='Background' width={1934} height={1154} className='z-[-50] fixed top-0 w-full h-full' />
+                    <main>
+                        <div className='mb-[200px] px-[3vw] sm:px-[85px] flex flex-col items-center gap-[200px]'>
+                            {children}
+                        </div>
+                    </main>
+                    <Footer />
+                </div>
+            </body>
         </html>
     )
 }

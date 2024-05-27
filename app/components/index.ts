@@ -1,4 +1,4 @@
-export * as Header from './Header'
+export { Header } from './Header'
 export { HomeHero } from './HomeHero'
 export { FeaturedProperties } from './FeaturedProperties'
 export { OurServices } from './OurServices'
