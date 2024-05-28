@@ -1,3 +1,40 @@
+.cloud1 {
+    animation: move1 70s ease-in-out infinite alternate;
+}
+
+@keyframes move1 {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.cloud2 {
+    animation: move2 90s ease-in-out infinite alternate;
+}
+
+@keyframes move2 {
+    0% {
+        transform: translateX(-187%);
+    }
+
+    50% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-187);
+    }
+}
+
+
 .projects {
     position: relative;
 }

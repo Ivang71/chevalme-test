@@ -8,7 +8,13 @@ export const HomeHero = () => {
                 <div>Timeless</div>
                 <div>luxury</div>
                 <div>re-imagined</div>
-                <Image src='/chevalme-test/images/car-home.webp' alt='Home and a car' width={1404} height={885} className='z-[-30] absolute top-[50%] translate-y-[-25%] sm:translate-y-[-45%] lg:translate-y-[-60%] pointer-events-none' />
+                <div className='z-[-30] absolute top-[50%] translate-y-[-25%] sm:translate-y-[-45%] lg:translate-y-[-60%] pointer-events-none'>
+                    <Image src='/chevalme-test/images/car-home.webp' alt='Home and a car' width={1404} height={885} />
+                    <Image src='/chevalme-test/images/cloud1.webp' alt='Cloud one' width={300} height={300}
+                        className={`${s.cloud1} z-[-50] absolute top-[20%] right-0 max-w-[50%]`} />
+                    <Image src='/chevalme-test/images/cloud2.webp' alt='Cloud two' width={300} height={300}
+                        className={`${s.cloud2} z-[-50] absolute top-[30%] right-0 max-w-[50%]`} />
+                </div>
             </div>
             <div className='mt-[136px] text-sm'>
                 <span className={`${s.projects} ${s.projActive} mr-[89px]`}>Ready</span>
