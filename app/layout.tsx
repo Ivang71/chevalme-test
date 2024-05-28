@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <Header />
                     <Image src='/slim-properties/images/bg.jpeg' alt='Background' width={1934} height={1154} className='z-[-50] fixed top-0 w-full h-full' />
                     <main>
-                        <div className='mb-[200px] px-[3vw] sm:px-[85px] flex flex-col items-center gap-[200px]'>
+                        <div className='px-[3vw] sm:px-[85px] flex flex-col items-center'>
                             <SmoothScrolling>
                                 {children}
                             </SmoothScrolling>
