@@ -1,7 +1,7 @@
 import '@/app/ui/global.css'
 import Image from 'next/image'
 import { Metadata } from 'next'
-import { Header, Footer } from '@/app/components'
+import { Header, Footer, SmoothScrolling } from '@/app/components'
 
 export const metadata: Metadata = {
     title: 'Slim Properties',
@@ -9,11 +9,7 @@ export const metadata: Metadata = {
     metadataBase: new URL('https://ivang71.github.io'),
 }
 
-export default function RootLayout({
-    children,
-}: {
-    children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
             <body>
@@ -22,7 +18,9 @@ export default function RootLayout({
                     <Image src='/slim-properties/images/bg.jpeg' alt='Background' width={1934} height={1154} className='z-[-50] fixed top-0 w-full h-full' />
                     <main>
                         <div className='mb-[200px] px-[3vw] sm:px-[85px] flex flex-col items-center gap-[200px]'>
-                            {children}
+                            <SmoothScrolling>
+                                {children}
+                            </SmoothScrolling>
                         </div>
                     </main>
                     <Footer />
