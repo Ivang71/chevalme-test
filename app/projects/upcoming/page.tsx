@@ -9,7 +9,7 @@ export default async function UpcomingProjectsPage() {
                 <div className='gotham text-[40px] sm:text-[69px] leading-[88px]'>
                     <div>Upcoming</div>
                     <div>Projects</div>
-                    <Image src='/chevalme-test/images/organic-house.webp' alt='Home and a car' width={1404} height={885}
+                    <Image src='/slim-properties/images/organic-house.webp' alt='Home and a car' width={1404} height={885}
                         className='z-[-30] absolute top-[43%] right-0 translate-y-[-25%] sm:translate-y-[-45%] lg:translate-y-[-60%] max-w-[95vw] sm:max-w-none pointer-events-none' />
                 </div>
             </div>
@@ -17,14 +17,14 @@ export default async function UpcomingProjectsPage() {
                 <div className='flex gap-4 flex-wrap'>
                     <span className={`${s.upcomingSearch} flex justify-between`}>
                         Type Here
-                        <Image src='/chevalme-test/icons/search.svg' alt='Search icon' width={16} height={16} className='ml-[-20px] inline-block' />
+                        <Image src='/slim-properties/icons/search.svg' alt='Search icon' width={16} height={16} className='ml-[-20px] inline-block' />
                     </span>
                 </div>
             </div>
             <div className='mt-[9px] flex flex-wrap'>
                 <PropertyCard
                     id='123testid456'
-                    imageUrl='/chevalme-test/images/property.jpg'
+                    imageUrl='/slim-properties/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
                     location='Vezul Residence, Business Bay.'
@@ -35,7 +35,7 @@ export default async function UpcomingProjectsPage() {
                 />
                 <PropertyCard
                     id='123testid456'
-                    imageUrl='/chevalme-test/images/property.jpg'
+                    imageUrl='/slim-properties/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
                     location='Vezul Residence, Business Bay.'
@@ -46,7 +46,7 @@ export default async function UpcomingProjectsPage() {
                 />
                 <PropertyCard
                     id='123testid456'
-                    imageUrl='/chevalme-test/images/property.jpg'
+                    imageUrl='/slim-properties/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
                     location='Vezul Residence, Business Bay.'
@@ -57,7 +57,7 @@ export default async function UpcomingProjectsPage() {
                 />
                 <PropertyCard
                     id='123testid456'
-                    imageUrl='/chevalme-test/images/property.jpg'
+                    imageUrl='/slim-properties/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
                     location='Vezul Residence, Business Bay.'
@@ -68,7 +68,7 @@ export default async function UpcomingProjectsPage() {
                 />
                 <PropertyCard
                     id='123testid456'
-                    imageUrl='/chevalme-test/images/property.jpg'
+                    imageUrl='/slim-properties/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
                     location='Vezul Residence, Business Bay.'
@@ -79,7 +79,7 @@ export default async function UpcomingProjectsPage() {
                 />
                 <PropertyCard
                     id='123testid456'
-                    imageUrl='/chevalme-test/images/property.jpg'
+                    imageUrl='/slim-properties/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
                     location='Vezul Residence, Business Bay.'
@@ -90,7 +90,7 @@ export default async function UpcomingProjectsPage() {
                 />
                 <PropertyCard
                     id='123testid456'
-                    imageUrl='/chevalme-test/images/property.jpg'
+                    imageUrl='/slim-properties/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
                     location='Vezul Residence, Business Bay.'

@@ -20,7 +20,7 @@ export const Header = () => {
     return (
         <div className={`mb-[50px] sm:mb-0 px-[3vw] sm:px-[85px] h-fit sm:h-[340px] pt-[89px]`}>
             <Link href='/'>
-                <Image src='/chevalme-test/texts/slim.svg' alt='Slim Properties logo' width={142} height={71} className='ml-[-4px]' />
+                <Image src='/slim-properties/texts/slim.svg' alt='Slim Properties logo' width={142} height={71} className='ml-[-4px]' />
             </Link>
             <nav className='mt-[41px] flex flex-wrap gap-[1px] text-sm'>
                 {routes.map((route) => (

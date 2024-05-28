@@ -27,15 +27,15 @@ export const PropertyCard = (props: PropertyCardProps) => {
                 <div className='text-xs'>{props.description}</div>
                 <div className='mt-[4px] flex gap-[17px] text-xs'>
                     <div>
-                        <Image src='/chevalme-test/icons/bed.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
+                        <Image src='/slim-properties/icons/bed.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
                         {props.bedrooms}
                     </div>
                     <div>
-                        <Image src='/chevalme-test/icons/bathtub.svg' alt='Bathtub icon' width={17} height={17} className='mr-[2px] inline' />
+                        <Image src='/slim-properties/icons/bathtub.svg' alt='Bathtub icon' width={17} height={17} className='mr-[2px] inline' />
                         {props.bathrooms}
                     </div>
                     <div>
-                        <Image src='/chevalme-test/icons/crop_free.svg' alt='Area icon' width={17} height={17} className='mr-[2px] inline' />
+                        <Image src='/slim-properties/icons/crop_free.svg' alt='Area icon' width={17} height={17} className='mr-[2px] inline' />
                         {props.area} sqft
                     </div>
                 </div>

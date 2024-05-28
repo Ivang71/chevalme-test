@@ -4,7 +4,7 @@ import styles from '@/app/ui/home.module.css'
 export const Footer = () => {
     return (
 
-        <footer className={`relative z-[100] min-[1440px]-h-[477px] bg-cover`} style={{ backgroundImage: 'url("/chevalme-test/images/ft-bg.jpeg")' }}>
+        <footer className={`relative z-[100] min-[1440px]-h-[477px] bg-cover`} style={{ backgroundImage: 'url("/slim-properties/images/ft-bg.jpeg")' }}>
             <div className={`${styles.footerTint}`}></div>
             <div className='z-50 px-[3vw] sm:px-[80px] pt-[91px] flex flex-wrap gap-y-10 gap-x-1'>
                 <div className='max-w-full'>
@@ -40,15 +40,15 @@ export const Footer = () => {
                     <div className='mt-[6px]'>Contact us</div>
                 </div>
                 <div className='sm:ml-[78px] w-[252px] text-sm'>
-                    <Image src='/chevalme-test/texts/slim.svg' alt='Slim Properties logo' width={142} height={71} className='ml-[-4px]' />
+                    <Image src='/slim-properties/texts/slim.svg' alt='Slim Properties logo' width={142} height={71} className='ml-[-4px]' />
                     <div className='mt-[53px]'>Office 304, Bay Square 11, Business Bay, Dubai, UAE</div>
                     <div className='mt-[6px]'>Ph: +971 04 111 1111</div>
                     <div className='mt-[6px]'>Email: info@example.com</div>
                     <div className='mt-[13px] flex'>
-                        <Image src='/chevalme-test/icons/fb.svg' alt='Facebook icon' width={13} height={13} className='mr-[13px] w-[13px] h-[13px]' />
-                        <Image src='/chevalme-test/icons/x.svg' alt='X icon' width={13} height={13} className='mr-[13px] w-[13px] h-[13px]' />
-                        <Image src='/chevalme-test/icons/instagram.svg' alt='Instagram icon' width={13} height={13} className='mr-[13px] w-[13px] h-[13px]' />
-                        <Image src='/chevalme-test/icons/linkedin.svg' alt='Linkedin icon' width={13} height={13} className='w-[13px] h-[13px]' />
+                        <Image src='/slim-properties/icons/fb.svg' alt='Facebook icon' width={13} height={13} className='mr-[13px] w-[13px] h-[13px]' />
+                        <Image src='/slim-properties/icons/x.svg' alt='X icon' width={13} height={13} className='mr-[13px] w-[13px] h-[13px]' />
+                        <Image src='/slim-properties/icons/instagram.svg' alt='Instagram icon' width={13} height={13} className='mr-[13px] w-[13px] h-[13px]' />
+                        <Image src='/slim-properties/icons/linkedin.svg' alt='Linkedin icon' width={13} height={13} className='w-[13px] h-[13px]' />
                     </div>
                 </div>
             </div>

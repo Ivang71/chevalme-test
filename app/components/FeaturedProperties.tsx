@@ -24,21 +24,21 @@ export const FeaturedProperties = () => {
             </div>
             <div className='flex flex-wrap'>
                 <div className={`${s.propPic} mt-[43px] w-[304px]`}>
-                    <Image src='/chevalme-test/images/property.jpg' alt='Photo of a property' width={304} height={293} />
+                    <Image src='/slim-properties/images/property.jpg' alt='Photo of a property' width={304} height={293} />
                     <div className='mt-[15px] ml-[10px]'>
                         <div className=' text-[15px] font-[700]'>Canal View Villa</div>
                         <div className='text-xs'>Vezul Residence, Business Bay.</div>
                         <div className='mt-[4px] flex gap-[17px] text-xs'>
                             <div>
-                                <Image src='/chevalme-test/icons/bed.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
+                                <Image src='/slim-properties/icons/bed.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
                                 2
                             </div>
                             <div>
-                                <Image src='/chevalme-test/icons/bathtub.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
+                                <Image src='/slim-properties/icons/bathtub.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
                                 2
                             </div>
                             <div>
-                                <Image src='/chevalme-test/icons/crop_free.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
+                                <Image src='/slim-properties/icons/crop_free.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
                                 1,273 sqft
                             </div>
                         </div>
@@ -46,21 +46,21 @@ export const FeaturedProperties = () => {
                     </div>
                 </div>
                 <div className={`${s.propPic} mt-[43px] w-[304px]`}>
-                    <Image src='/chevalme-test/images/property.jpg' alt='Photo of a property' width={304} height={293} />
+                    <Image src='/slim-properties/images/property.jpg' alt='Photo of a property' width={304} height={293} />
                     <div className='mt-[15px] ml-[10px]'>
                         <div className=' text-[15px] font-[700]'>Canal View Villa</div>
                         <div className='text-xs'>Vezul Residence, Business Bay.</div>
                         <div className='mt-[4px] flex gap-[17px] text-xs'>
                             <div>
-                                <Image src='/chevalme-test/icons/bed.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
+                                <Image src='/slim-properties/icons/bed.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
                                 2
                             </div>
                             <div>
-                                <Image src='/chevalme-test/icons/bathtub.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
+                                <Image src='/slim-properties/icons/bathtub.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
                                 2
                             </div>
                             <div>
-                                <Image src='/chevalme-test/icons/crop_free.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
+                                <Image src='/slim-properties/icons/crop_free.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
                                 1,273 sqft
                             </div>
                         </div>
@@ -69,7 +69,7 @@ export const FeaturedProperties = () => {
                 </div>
                 <div className='mt-[43px] w-[304px]'>
                     <div className={`${s.lastProperty}`}>
-                        <Image src='/chevalme-test/images/property.jpg' alt='Photo of a property' width={304} height={293} />
+                        <Image src='/slim-properties/images/property.jpg' alt='Photo of a property' width={304} height={293} />
                         <div className={`${s.backdrop} text-[14px]`}>Explore All</div>
                     </div>
                 </div>

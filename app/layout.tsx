@@ -19,7 +19,7 @@ export default function RootLayout({
             <body>
                 <div className='text-[#eddfd0] helveticaNeue'>
                     <Header />
-                    <Image src='/chevalme-test/images/bg.jpeg' alt='Background' width={1934} height={1154} className='z-[-50] fixed top-0 w-full h-full' />
+                    <Image src='/slim-properties/images/bg.jpeg' alt='Background' width={1934} height={1154} className='z-[-50] fixed top-0 w-full h-full' />
                     <main>
                         <div className='mb-[200px] px-[3vw] sm:px-[85px] flex flex-col items-center gap-[200px]'>
                             {children}

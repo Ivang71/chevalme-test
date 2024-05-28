@@ -39,7 +39,7 @@ export const OurServices = () => {
                     <div className={`${s.readMore} mt-[15px] text-xs`}>Read More</div>
                 </div>
             </div>
-            <div className={`${homeStyles.textShadow} mt-[56px] max-w-[100%] lg:w-[1154px] sm:h-[230px] px-[41px] pt-[56px] bg-cover text-white`} style={{ backgroundImage: 'url(/chevalme-test/images/services-bg.jpg)' }}>
+            <div className={`${homeStyles.textShadow} mt-[56px] max-w-[100%] lg:w-[1154px] sm:h-[230px] px-[41px] pt-[56px] bg-cover text-white`} style={{ backgroundImage: 'url(/slim-properties/images/services-bg.jpg)' }}>
                 <div className='leading-[123%] text-[38px]'>Personalised Investment Advisory</div>
                 <div className='sm:w-[480px] leading-[2.4]'>Connect with us for a comprehensive real estate investment experience tailored to high end needs</div>
             </div>

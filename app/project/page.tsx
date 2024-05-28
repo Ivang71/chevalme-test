@@ -3,8 +3,17 @@
 import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
 import s from '@/app/ui/scrollSection.module.css'
+import { Suspense } from 'react'
 
 export default function ProjectPage() {
+    return (
+        <Suspense>
+            <ProjectComponent />
+        </Suspense>
+    )
+}
+
+function ProjectComponent() {
     const searchParams = useSearchParams()
 
     const id = searchParams.get('id')
@@ -13,8 +22,8 @@ export default function ProjectPage() {
 
     const data = {
         id: '123testid456',
-        imageUrl: '/chevalme-test/images/property.jpg',
-        bigImageUrl: '/chevalme-test/images/prop-close.jpg',
+        imageUrl: '/slim-properties/images/property.jpg',
+        bigImageUrl: '/slim-properties/images/prop-close.jpg',
         altText: 'Photo of a property',
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.",
         title: 'Canal View Villa',
@@ -37,21 +46,21 @@ export default function ProjectPage() {
                     </div>
                     <div className='mt-[50px]'>
                         <button className='px-[25px] py-[9px] pl-[15px] grid place-items-center grid-cols-2 gap-[11px] rounded-3xl border border-solid border-[#EDDFD0] text-sm hover:bg-white/30 active:bg-white/60 hover:text-gray-700 active:text-black transition duration-200 ease-in-out'>
-                            <Image src='/chevalme-test/icons/share.svg' alt='Share icon' width={29} height={29} />
+                            <Image src='/slim-properties/icons/share.svg' alt='Share icon' width={29} height={29} />
                             Share
                         </button>
                     </div>
                     <div className='mt-[21px] flex gap-[22px] text-sm'>
                         <div>
-                            <Image src='/chevalme-test/icons/bed.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
+                            <Image src='/slim-properties/icons/bed.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
                             2
                         </div>
                         <div>
-                            <Image src='/chevalme-test/icons/bathtub.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
+                            <Image src='/slim-properties/icons/bathtub.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
                             2
                         </div>
                         <div>
-                            <Image src='/chevalme-test/icons/crop_free.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
+                            <Image src='/slim-properties/icons/crop_free.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
                             1,273 sqft
                         </div>
                     </div>
@@ -62,13 +71,13 @@ export default function ProjectPage() {
                 <div className='flex flex-col gap-[15px]'>
                     <Image src={data.bigImageUrl} alt={data.altText} width={791} height={490} />
                     <div className='mx-auto max-h-[101px] flex gap-[11px]'>
-                        <Image src='/chevalme-test/images/prop-close-thumb.jpg' alt={data.altText} width={101} height={97} className='max-w-[22%]' />
-                        <Image src='/chevalme-test/images/prop-close-thumb.jpg' alt={data.altText} width={101} height={97} className='max-w-[22%]' />
-                        <Image src='/chevalme-test/images/prop-close-thumb.jpg' alt={data.altText} width={101} height={97} className='max-w-[22%]' />
+                        <Image src='/slim-properties/images/prop-close-thumb.jpg' alt={data.altText} width={101} height={97} className='max-w-[22%]' />
+                        <Image src='/slim-properties/images/prop-close-thumb.jpg' alt={data.altText} width={101} height={97} className='max-w-[22%]' />
+                        <Image src='/slim-properties/images/prop-close-thumb.jpg' alt={data.altText} width={101} height={97} className='max-w-[22%]' />
                         <div className={`${s.viewMorePics} `}>
-                            <Image src='/chevalme-test/images/prop-close-thumb.jpg' alt='Photo of a property' width={101} height={97} />
+                            <Image src='/slim-properties/images/prop-close-thumb.jpg' alt='Photo of a property' width={101} height={97} />
                             <div className={`${s.backdrop} text-[10px]`}>
-                                <Image src='/chevalme-test/icons/camera.svg' alt='Camera icon' width={20} height={20} />
+                                <Image src='/slim-properties/icons/camera.svg' alt='Camera icon' width={20} height={20} />
                                 <span>20+ Photos</span>
                             </div>
                         </div>
