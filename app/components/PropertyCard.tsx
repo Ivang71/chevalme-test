@@ -1,7 +1,9 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import s from '@/app/ui/scrollSection.module.css'
 
 interface PropertyCardProps {
+    id: string
     imageUrl: string
     altText: string
     title: string
@@ -16,7 +18,9 @@ interface PropertyCardProps {
 export const PropertyCard = (props: PropertyCardProps) => {
     return (
         <div className={`${s.propPic} mt-[43px] w-[304px]`}>
-            <Image src={props.imageUrl} alt={props.altText} width={304} height={293} />
+            <Link href={`/project?id=${props.id}`}>
+                <Image src={props.imageUrl} alt={props.altText} width={304} height={293} />
+            </Link>
             <div className='mt-[15px] ml-[10px]'>
                 <div className=' text-[15px] font-[700]'>{props.title}</div>
                 <div className='text-xs'>{props.location}</div>

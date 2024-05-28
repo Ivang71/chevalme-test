@@ -136,3 +136,33 @@
         display: none;
     }
 }
+
+.viewMorePics {
+    position: relative;
+}
+
+.viewMorePics .backdrop {
+    color: #FFF7E5;
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .54);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.delimiterLine {
+    margin-left: 80px;
+    width: calc(100% - 160px);
+    height: 1px;
+    background: #EDDFD0;
+    opacity: .5;
+}
+
+@media screen and (max-width: 640px) {
+    .delimiterLine {
+        margin-left: 3vw;
+        width: calc(100% - 6vw);
+    }
+}

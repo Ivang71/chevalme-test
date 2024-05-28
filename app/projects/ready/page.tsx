@@ -31,6 +31,7 @@ export default async function ReadyProjectsPage() {
             </div>
             <div className='mt-[9px] flex flex-wrap'>
                 <PropertyCard
+                    id='123testid456'
                     imageUrl='/chevalme-test/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
@@ -41,6 +42,7 @@ export default async function ReadyProjectsPage() {
                     price='AED 1,560.000'
                 />
                 <PropertyCard
+                    id='123testid456'
                     imageUrl='/chevalme-test/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
@@ -51,6 +53,7 @@ export default async function ReadyProjectsPage() {
                     price='AED 1,560.000'
                 />
                 <PropertyCard
+                    id='123testid456'
                     imageUrl='/chevalme-test/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
@@ -61,6 +64,7 @@ export default async function ReadyProjectsPage() {
                     price='AED 1,560.000'
                 />
                 <PropertyCard
+                    id='123testid456'
                     imageUrl='/chevalme-test/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
@@ -71,6 +75,7 @@ export default async function ReadyProjectsPage() {
                     price='AED 1,560.000'
                 />
                 <PropertyCard
+                    id='123testid456'
                     imageUrl='/chevalme-test/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
@@ -81,6 +86,7 @@ export default async function ReadyProjectsPage() {
                     price='AED 1,560.000'
                 />
                 <PropertyCard
+                    id='123testid456'
                     imageUrl='/chevalme-test/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
@@ -91,6 +97,7 @@ export default async function ReadyProjectsPage() {
                     price='AED 1,560.000'
                 />
                 <PropertyCard
+                    id='123testid456'
                     imageUrl='/chevalme-test/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
