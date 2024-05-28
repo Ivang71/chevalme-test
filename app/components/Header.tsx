@@ -24,7 +24,7 @@ export const Header = () => {
             </Link>
             <nav className='mt-[41px] flex flex-wrap gap-[1px] text-sm'>
                 {routes.map((route) => (
-                    <Link key={route} href={route}>
+                    <Link key={route} href={route + '/'}>
                         <div
                             className={`${pathname === route ? styles.navActive : ''} cursor-pointer p-4 rounded-xl hover:bg-white/30 active:bg-white/60 hover:text-gray-900 active:text-black transition duration-200 ease-in-out`}
                         >
