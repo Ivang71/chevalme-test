@@ -1,1 +1,1 @@
-The repository for my frontend development portfolio
+Slim Properties frontend
