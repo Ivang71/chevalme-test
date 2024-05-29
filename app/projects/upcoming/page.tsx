@@ -4,7 +4,7 @@ import { PropertyCard } from '@/app/components'
 
 export default async function UpcomingProjectsPage() {
     return (
-        <div className="">
+        <div className="mb-[83px]">
             <div className='flex flex-wrap gap-8'>
                 <div className='gotham text-[40px] sm:text-[69px] leading-[88px] font-[700]'>
                     <div>Upcoming</div>

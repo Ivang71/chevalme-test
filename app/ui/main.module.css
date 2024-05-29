@@ -162,10 +162,11 @@
     content: "";
     position: absolute;
     right: 52px;
-    top: 10px;
+    top: 52px;
     width: .5px;
     height: 146px;
     background: #EDDFD0;
+    opacity: 50%;
 }
 
 @media screen and (max-width: 640px) {

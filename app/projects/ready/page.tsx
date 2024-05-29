@@ -4,7 +4,7 @@ import { PropertyCard } from '@/app/components'
 
 export default async function ReadyProjectsPage() {
     return (
-        <div className="">
+        <div className="mb-[83px]">
             <div className='flex flex-wrap gap-8'>
                 <div className='gotham text-[40px] sm:text-[69px] leading-[88px] font-[700]'>
                     <div>Ready</div>
@@ -19,9 +19,9 @@ export default async function ReadyProjectsPage() {
                     <span className={`${s.propFilter}`}>Bedroom</span>
                     <span className={`${s.propFilter}`}>Bathroom</span>
                     <span className={`${s.propFilter}`}>Home type</span>
-                    <span className={`${s.propFilter}`}>
-                        Price low to high
-                        <Image src='/slim-properties/icons/expand_more.svg' alt='Arrow down' width={24} height={24} className='ml-[20px] inline-block' />
+                    <span className={`${s.propFilter} flex justify-between`}>
+                        <span>Price low to high</span>
+                        <Image src='/slim-properties/icons/expand_more.svg' alt='Arrow down' width={24} height={24} />
                     </span>
                 </div>
                 <div className='flex mt-[17px] text-center'>

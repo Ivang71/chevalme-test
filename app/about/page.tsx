@@ -1,12 +1,11 @@
 import Image from 'next/image'
-import { Instagram, WhoWeAre } from '@/app/components'
+import { Instagram, WhoWeAre, InvestmentAdvisory } from '@/app/components'
 
 export default async function AboutPage() {
     return (
         <div>
-
             <div className="relative min-[1630px]:min-w-[1440px] max-[1629px]:w-full">
-                <div className='gotham text-[50px] sm:text-[85px] leading-[88px] font-[700]'>
+                <div className='gotham text-[50px] sm:text-[69px] leading-[88px] font-[700]'>
                     <div>Who we</div>
                     <div>are</div>
                     <div className='z-[-30] absolute top-[50%] translate-y-[-25%] sm:translate-y-[-45%] lg:translate-y-[-60%] pointer-events-none'>
@@ -42,10 +41,7 @@ export default async function AboutPage() {
                     </div>
                 </div>
             </div>
-            <div className={`mt-[47px] max-w-[100%] lg:w-[1154px] sm:h-[230px] px-[41px] pt-[56px] bg-cover text-white`} style={{ backgroundImage: 'url(/slim-properties/images/services-bg.jpg)', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
-                <div className='leading-[123%] text-[38px]'>Personalised Investment Advisory</div>
-                <div className='sm:w-[480px] leading-[2.4]'>Connect with us for a comprehensive real estate investment experience tailored to high end needs</div>
-            </div>
+            <InvestmentAdvisory/>
             <div className='mt-[36px]'>
                 <div className='gotham text-[40px] sm:text-[69px] leading-[88px] font-[700]'>
                     Meet The Team
@@ -85,7 +81,6 @@ export default async function AboutPage() {
             </div>
             <div className='mt-[50px] mb-[68px] flex flex-wrap'>
                 <Instagram />
-
             </div>
         </div>
     )
