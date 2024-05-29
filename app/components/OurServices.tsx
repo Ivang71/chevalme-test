@@ -1,4 +1,4 @@
-import s from '@/app/ui/scrollSection.module.css'
+import s from '@/app/ui/main.module.css'
 import homeStyles from '@/app/ui/home.module.css'
 
 export const OurServices = () => {

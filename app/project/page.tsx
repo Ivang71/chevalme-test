@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
-import s from '@/app/ui/scrollSection.module.css'
+import s from '@/app/ui/main.module.css'
 import { Suspense } from 'react'
 import { GoogleMapsEmbed } from '@next/third-parties/google'
 

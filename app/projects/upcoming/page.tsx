@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import s from '@/app/ui/scrollSection.module.css'
+import s from '@/app/ui/main.module.css'
 import { PropertyCard } from '@/app/components'
 
 export default async function UpcomingProjectsPage() {
