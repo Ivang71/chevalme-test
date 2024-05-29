@@ -85,22 +85,29 @@ function ProjectComponent() {
                     </div>
                 </div>
             </div>
-            <div className='pt-[36px] pb-[46px] w-full flex flex-wrap gap-[28px] border-b border-solid border-[#EDDFD0] border-opacity-50'>
-                <div className='text-center'>
-                    <Image src='/slim-properties/icons/add_a_photo.svg' alt='Camera icon' width={114} height={114} className='mb-4 p-[41px] rounded-full border border-solid border-[#EDDFD0]' />
-                    Photos
+            <div className='pt-[36px] pb-[46px] w-full flex gap-7 flex-wrap items-center justify-between border-b border-solid border-[#EDDFD0] border-opacity-50'>
+                <div className='flex flex-wrap gap-[28px]'>
+                    <div className='text-center'>
+                        <Image src='/slim-properties/icons/add_a_photo.svg' alt='Camera icon' width={114} height={114} className='mb-4 p-[41px] rounded-full border border-solid border-[#EDDFD0]' />
+                        Photos
+                    </div>
+                    <div className='text-center'>
+                        <Image src='/slim-properties/icons/floor_lamp.svg' alt='Lamp icon' width={114} height={114} className='mb-4 p-[41px] rounded-full border border-solid border-[#EDDFD0]' />
+                        Floor Plan
+                    </div>
+                    <div className='text-center'>
+                        <Image src='/slim-properties/icons/play_circle.svg' alt='Play circle icon' width={114} height={114} className='mb-4 p-[41px] rounded-full border border-solid border-[#EDDFD0]' />
+                        Video
+                    </div>
+                    <div className='text-center'>
+                        <Image src='/slim-properties/icons/book.svg' alt='Book icon' width={114} height={114} className='mb-4 p-[41px] rounded-full border border-solid border-[#EDDFD0]' />
+                        Brochure
+                    </div>
                 </div>
-                <div className='text-center'>
-                    <Image src='/slim-properties/icons/floor_lamp.svg' alt='Lamp icon' width={114} height={114} className='mb-4 p-[41px] rounded-full border border-solid border-[#EDDFD0]' />
-                    Floor Plan
-                </div>
-                <div className='text-center'>
-                    <Image src='/slim-properties/icons/play_circle.svg' alt='Play circle icon' width={114} height={114} className='mb-4 p-[41px] rounded-full border border-solid border-[#EDDFD0]' />
-                    Video
-                </div>
-                <div className='text-center'>
-                    <Image src='/slim-properties/icons/book.svg' alt='Book icon' width={114} height={114} className='mb-4 p-[41px] rounded-full border border-solid border-[#EDDFD0]' />
-                    Brochure
+                <div>
+                    {/* <button className='pt-[13px] pr-[26px] pb-[17px] pl-[24px] rounded-3xl border border-solid border-[#EDDFD0] text-sm hover:bg-white/30 active:bg-white/60 hover:text-gray-700 active:text-black transition duration-200 ease-in-out'>
+                        Payment Terms
+                    </button> */}
                 </div>
             </div>
             <div className='mb-[44px] py-[46px] w-full flex flex-wrap gap-[65px] border-b border-solid border-[#EDDFD0] border-opacity-50'>
