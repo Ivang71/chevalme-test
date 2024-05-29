@@ -1,5 +1,5 @@
 .cloud1 {
-    animation: move1 70s ease-in-out infinite alternate;
+    animation: move1 40s ease-in-out infinite alternate;
 }
 
 @keyframes move1 {
@@ -17,7 +17,7 @@
 }
 
 .cloud2 {
-    animation: move2 90s ease-in-out infinite alternate;
+    animation: move2 60s ease-in-out infinite alternate;
 }
 
 @keyframes move2 {

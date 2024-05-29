@@ -1,16 +1,17 @@
 import Image from 'next/image'
 import { Instagram, WhoWeAre } from '@/app/components'
-import s from '@/app/ui/main.module.css'
 
 export default async function AboutPage() {
     return (
-        <div className="">
-            <div className='flex flex-wrap gap-8'>
-                <div className='gotham text-[40px] sm:text-[69px] leading-[88px]'>
+        <div>
+
+            <div className="relative min-[1630px]:min-w-[1440px] max-[1629px]:w-full">
+                <div className='gotham text-[50px] sm:text-[85px] leading-[88px] font-[700]'>
                     <div>Who we</div>
                     <div>are</div>
-                    <Image src='/slim-properties/images/aboutus-bulding.webp' alt='Home and a car' width={1404} height={885}
-                        className='z-[-30] absolute top-[43%] right-0 translate-y-[-25%] sm:translate-y-[-45%] lg:translate-y-[-60%] max-w-[95vw] sm:max-w-none pointer-events-none' />
+                    <div className='z-[-30] absolute top-[50%] translate-y-[-25%] sm:translate-y-[-45%] lg:translate-y-[-60%] pointer-events-none'>
+                        <Image src='/slim-properties/images/aboutus-bulding.webp' alt='Home and a car' width={1404} height={885} />
+                    </div>
                 </div>
             </div>
             <WhoWeAre />

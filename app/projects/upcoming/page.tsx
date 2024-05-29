@@ -6,7 +6,7 @@ export default async function UpcomingProjectsPage() {
     return (
         <div className="">
             <div className='flex flex-wrap gap-8'>
-                <div className='gotham text-[40px] sm:text-[69px] leading-[88px]'>
+                <div className='gotham text-[40px] sm:text-[69px] leading-[88px] font-[700]'>
                     <div>Upcoming</div>
                     <div>Projects</div>
                     <Image src='/slim-properties/images/organic-house.webp' alt='Home and a car' width={1404} height={885}

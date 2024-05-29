@@ -4,7 +4,7 @@ import s from '@/app/ui/main.module.css'
 export const HomeHero = () => {
     return (
         <div className="relative min-[1630px]:min-w-[1440px] max-[1629px]:w-full">
-            <div className='gotham text-[50px] sm:text-[85px] leading-[88px]'>
+            <div className='gotham text-[50px] sm:text-[85px] leading-[88px] font-[700]'>
                 <div>Timeless</div>
                 <div>luxury</div>
                 <div>re-imagined</div>
