@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { GoogleMapsEmbed } from '@next/third-parties/google'
+import '@/app/ui/index.css'
 import { EnquireForm } from '@/app/components'
 
 export default async function Contact() {

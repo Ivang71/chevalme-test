@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import '@/app/ui/index.css'
 import styles from '@/app/ui/home.module.css'
 
 export const Footer = () => {

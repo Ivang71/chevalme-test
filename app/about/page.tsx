@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import '@/app/ui/index.css'
 import { Instagram, WhoWeAre, InvestmentAdvisory } from '@/app/components'
 
 export default async function AboutPage() {

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { InvestmentAdvisory, Instagram } from '@/app/components'
+import '@/app/ui/index.css'
 import s from '@/app/ui/main.module.css'
 
 export default async function ServicesPage() {

@@ -1,4 +1,5 @@
 import { InvestmentAdvisory, InvestmentExperience } from '@/app/components'
+import '@/app/ui/index.css'
 
 export const OurServices = () => {
     return (

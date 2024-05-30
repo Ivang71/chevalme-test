@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import '@/app/ui/index.css'
 import s from '@/app/ui/main.module.css'
 
 export const FeaturedProperties = () => {
