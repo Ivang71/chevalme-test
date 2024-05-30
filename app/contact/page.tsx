@@ -15,7 +15,7 @@ export default async function Contact() {
                     </div>
                 </div>
             </div>
-            <div className='mt-[120px] pb-[43px] flex flex-wrap gap-[75px] border-b border-solid border-[#EDDFD0] border-opacity-50'>
+            <div className='mt-[120px] mb-[30px] pb-[43px] flex flex-wrap gap-[75px] border-b border-solid border-[#EDDFD0] border-opacity-50'>
                 <div className='sm:ml-[78px] w-[252px] text-sm leading-[29px]'>
                     <div className='mt-[53px]'>Office 304, Bay Square 11, Business Bay, Dubai, UAE</div>
                     <div className='mt-[6px]'>Ph: +971 04 111 1111</div>
@@ -36,10 +36,6 @@ export default async function Contact() {
                         q="1 Sheikh Mohammed bin Rashid Blvd - Downtown Dubai - Dubai - United Arab Emirates"
                     />
                 </div>
-            </div>
-            <div className='mt-[30px] gotham text-[50px] sm:text-[69px] leading-[88px] font-[700]'>
-                <div>Enquire</div>
-                <div>Now</div>
             </div>
             <EnquireForm/>
         </div>
