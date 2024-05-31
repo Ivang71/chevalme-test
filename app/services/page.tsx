@@ -21,7 +21,6 @@ export default async function ServicesPage() {
                 </div>
             </div>
             <div className="mb-[48px] max-w-[100%]">
-
                 <div className='flex flex-wrap gap-x-2 gap-y-14 mt-[35px] pb-[37px] xs border-b border-solid border-[#EDDFD0] border-opacity-50'>
                     <div className={`${s.serviceBlock} sm:w-[380px]`}>
                         <div className='text-[20px]'>Sales</div>

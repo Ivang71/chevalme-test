@@ -21,6 +21,10 @@ export default async function InvestPage() {
                 </div>
             </div>
             <div className='mt-[60px] mb-[78px]'>
+                <div className='gotham text-[50px] sm:text-[69px] leading-[88px] font-[700]'>
+                    <div>Enquire</div>
+                    <div>Now</div>
+                </div>
                 <EnquireForm />
             </div>
         </div>

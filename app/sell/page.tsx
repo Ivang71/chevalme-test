@@ -26,7 +26,11 @@ export default async function SellPage() {
                 <Image src='/slim-properties/images/sell2.webp' alt='Building in snow' width={395} height={480} className='mt-[50px] max-w-full' />
             </div>
             <div className='mb-[72px]'>
-                <EnquireForm/>
+                <div className='gotham text-[50px] sm:text-[69px] leading-[88px] font-[700]'>
+                    <div>Enquire</div>
+                    <div>Now</div>
+                </div>
+                <EnquireForm />
             </div>
         </div>
     )

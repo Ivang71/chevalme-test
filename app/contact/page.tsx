@@ -37,6 +37,10 @@ export default async function Contact() {
                     />
                 </div>
             </div>
+            <div className='gotham text-[50px] sm:text-[69px] leading-[88px] font-[700]'>
+                <div>Enquire</div>
+                <div>Now</div>
+            </div>
             <EnquireForm/>
         </div>
     )
