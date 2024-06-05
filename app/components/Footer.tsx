@@ -5,8 +5,7 @@ import { Year } from '@/app/components'
 
 export const Footer = () => {
     return (
-
-        <footer className={`relative z-[100] min-[1440px]-h-[477px] bg-cover`} style={{ backgroundImage: 'url("/slim-properties/images/ft-bg.jpeg")' }}>
+        <footer className={`relative z-[-1] min-[1440px]-h-[477px] bg-cover`} style={{ backgroundImage: 'url("/slim-properties/images/ft-bg.jpeg")' }}>
             <div className={`${styles.footerTint}`}></div>
             <div className='z-50 px-[3vw] sm:px-[80px] pt-[91px] flex flex-wrap gap-y-10 gap-x-1'>
                 <div className='max-w-full'>
@@ -42,7 +41,7 @@ export const Footer = () => {
                     <div className='mt-[6px]'>Contact us</div>
                 </div>
                 <div className='sm:ml-[78px] w-[252px] text-sm font-[200]'>
-                    <Image src='/slim-properties/texts/slim.svg' alt='Slim Properties logo' width={142} height={71} className='ml-[-4px]' />
+                    <Image src='/slim-properties/logos/slim.svg' alt='Slim Properties logo' width={142} height={71} className='ml-[-4px]' />
                     <div className='mt-[53px]'>Office 304, Bay Square 11, Business Bay, Dubai, UAE</div>
                     <div className='mt-[6px]'>Ph: +971 04 111 1111</div>
                     <div className='mt-[6px]'>Email: info@example.com</div>
