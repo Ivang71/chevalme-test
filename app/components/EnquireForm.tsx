@@ -85,6 +85,21 @@ export const EnquireForm = () => {
         }
     }
 
+    useEffect(() => {
+        // fix for id links
+        document.querySelectorAll('a[href^="#"]').forEach((el) => {
+            el.addEventListener('click', (e) => {
+                e.preventDefault()
+                const id = el.getAttribute('href')?.slice(1)
+                if (!id) return
+                const target = document.getElementById(id)
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' })
+                }
+            })
+        })
+    }, [])
+
     return (
         <>
             <form onSubmit={handleSubmit} className='mt-[43px] text-white'>

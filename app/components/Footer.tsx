@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import '@/app/ui/index.css'
 import styles from '@/app/ui/home.module.css'
+import { Year } from '@/app/components'
 
 export const Footer = () => {
     return (
@@ -12,7 +13,7 @@ export const Footer = () => {
                     <div className='sm:w-[391px] gotham text-[25px] font-[200] leading-[164%]'>A World of Leading Expertise Exclusively yours</div>
                     <div className='sm:w-[508px] mt-[38px] text-[25px] font-[500] leading-[147%]'>Sign up for our newsletter to stay updated with what’s new in UAE real estate</div>
                     <div>
-                        <div className='mt-[19px] text-sm'>Enter your email</div>
+                        <div className='mt-[19px] text-sm font-[200]'>Enter your email</div>
                         {/* <input type="email" className='appearance-none' /> */}
                         <div className='mt-[-15px] flex gap-1 items-end'>
                             <div className={`${styles.emailUnderline}`}></div>
@@ -20,8 +21,8 @@ export const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='sm:ml-[67px] text-sm'>
-                    <div className='font-[700]'>Explore Residential in</div>
+                <div className='sm:ml-[67px] text-sm font-[200]'>
+                    <div className='font-[700]'>EXPLORE RESIDENTIAL IN</div>
                     <div className='mt-[7px]'>Palm Jumeirah</div>
                     <div className='mt-[6px]'>Jumeirah Beach Residence</div>
                     <div className='mt-[6px]'>Dubai Marina</div>
@@ -30,8 +31,8 @@ export const Footer = () => {
                     <div className='mt-[6px]'>Dubai Hills</div>
                     <div className='mt-[6px]'>City Walk</div>
                 </div>
-                <div className='sm:ml-[67px] text-sm'>
-                    <div className='font-[700]'>Slim Property</div>
+                <div className='sm:ml-[67px] text-sm font-[200]'>
+                    <div className='font-[700]'>SLIM PROPERTY</div>
                     <div className='mt-[7px]'>About us</div>
                     <div className='mt-[6px]'>Services</div>
                     <div className='mt-[6px]'>Investment</div>
@@ -40,7 +41,7 @@ export const Footer = () => {
                     <div className='mt-[6px]'>Blogs & news</div>
                     <div className='mt-[6px]'>Contact us</div>
                 </div>
-                <div className='sm:ml-[78px] w-[252px] text-sm'>
+                <div className='sm:ml-[78px] w-[252px] text-sm font-[200]'>
                     <Image src='/slim-properties/texts/slim.svg' alt='Slim Properties logo' width={142} height={71} className='ml-[-4px]' />
                     <div className='mt-[53px]'>Office 304, Bay Square 11, Business Bay, Dubai, UAE</div>
                     <div className='mt-[6px]'>Ph: +971 04 111 1111</div>
@@ -53,10 +54,10 @@ export const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className={`${styles.footerLine} mt-[40px]`}></div>
-            <div className='mt-[26px] ml-[3vw] pb-12 sm:ml-[80px] w-[calc(100%-3vw)] sm:w-[calc(100%-160px)] flex justify-between gap-5 text-sm'>
-                <div className={styles.designedBy}>Designed & Developed by Cheval</div>
-                <div className={styles.copyright}>© 2024 Slim Properties. All rights reserved</div>
+            <div className={`${styles.footerLine} mt-[40px] font-[200]`}></div>
+            <div className='mt-[26px] ml-[3vw] pb-12 sm:ml-[80px] w-[calc(100%-3vw)] sm:w-[calc(100%-160px)] flex justify-between gap-5 text-sm font-[200]'>
+                <div className={styles.designedBy}>Designed & Developed By Cheval</div>
+                <div className={styles.copyright}>© <Year/> Slim Properties. All rights reserved</div>
             </div>
         </footer>
     )

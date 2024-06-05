@@ -4,16 +4,16 @@ import s from '@/app/ui/main.module.css'
 
 export const HomeHero = () => {
     return (
-        <div className="relative min-[1630px]:min-w-[1440px] max-[1629px]:w-full">
+        <div className="min-[1630px]:min-w-[1440px] max-[1629px]:w-full">
             <div className='gotham text-[50px] sm:text-[85px] leading-[88px] font-[700]'>
                 <div>Timeless</div>
                 <div>luxury</div>
                 <div>re-imagined</div>
-                <div className='z-[-30] absolute top-[50%] translate-y-[-25%] sm:translate-y-[-45%] lg:translate-y-[-60%] pointer-events-none'>
+                <div className='z-[-30] absolute top-[50%] right-0 translate-y-[-25%] sm:translate-y-[-15%] lg:translate-y-[-30%] pointer-events-none'>
                     <Image src='/slim-properties/images/car-home.webp' alt='Home and a car' width={1404} height={885} />
-                    <Image src='/slim-properties/images/cloud1.webp' alt='Cloud one' width={300} height={300}
-                        className={`${s.cloud1} z-[-50] absolute top-[20%] right-0 max-w-[50%]`} />
-                    <Image src='/slim-properties/images/cloud2.webp' alt='Cloud two' width={300} height={300}
+                    <Image src='/slim-properties/images/cloud1.webp' alt='Cloud one' width={623} height={352}
+                        className={`${s.cloud1} z-[-50] absolute top-[10%] right-0 max-w-[50%]`} />
+                    <Image src='/slim-properties/images/cloud2.webp' alt='Cloud two' width={513} height={267}
                         className={`${s.cloud2} z-[-50] absolute top-[30%] right-0 max-w-[50%]`} />
                 </div>
             </div>

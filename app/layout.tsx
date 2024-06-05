@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en">
             <body>
-                <div className='text-[#eddfd0] helveticaNeue'>
+                <div className='text-[#eddfd0] helveticaNeue font-[200]'>
                     <Header />
                     <Image src='/slim-properties/images/bg.jpeg' alt='Background' width={1934} height={1154} className='z-[-50] fixed top-0 w-full h-full' />
                     <main>
