@@ -46,7 +46,7 @@ export const Header = () => {
     }, [])
 
     return isLargeScreen ? (
-        <div className={`mb-[50px] sm:mb-0 px-[3vw] sm:px-[85px] h-fit sm:h-[340px] pt-[30px] lg:pt-[89px] flex lg:flex-col`}>
+        <div className={`mb-[50px] sm:mb-0 px-[3vw] sm:px-[85px] h-[340px] pt-[30px] lg:pt-[89px] flex lg:flex-col`}>
             <Link href='/'>
                 <Image src='/slim-properties/logos/slim.svg' alt='Slim Properties logo' width={142} height={71} className='ml-[-4px]' />
             </Link>
@@ -62,7 +62,7 @@ export const Header = () => {
             </nav>
         </div>
     ) : (
-        <div className={`mb-[50px] sm:mb-0 px-[15px] sm:px-[85px] h-fit sm:h-[340px] pt-[30px] lg:pt-[89px] flex justify-between`}>
+        <div className={`mb-[50px] md:mb-0 px-[15px] md:px-[85px] h-[160px] pt-[30px] lg:pt-[89px] flex justify-between`}>
             <Link href='/'>
                 <Image src='/slim-properties/logos/slim.svg' alt='Slim Properties logo' width={142} height={71}
                     className='ml-[-4px] w-[76px] h-[38px] lg:w-[142px] lg:h-[71px]' />
@@ -72,7 +72,7 @@ export const Header = () => {
                     <path d='M4 6H20M4 12H20M4 18H20' stroke='currentColor' strokeWidth='1' strokeLinecap='round' />
                 </svg>
             </button>
-            <div className={`z-1000 px-[15px] sm:px-[85px] pt-[30px] lg:pt-[89px] ${isOpen? 'scale-y-100 pointer-events-auto' : 'scale-y-0 pointer-events-none'}
+            <div className={`z-1000 px-[15px] md:px-[85px] pt-[30px] lg:pt-[89px] ${isOpen? 'scale-y-100 pointer-events-auto' : 'scale-y-0 pointer-events-none'}
                 fixed inset-0 bg-[#EDDFD0] origin-top origin-center transition duration-1000 ease-[cubic-bezier(.16,1,.3,1)]`}>
                 <div className='flex justify-between'>
                     <Link href='/'>
