@@ -4,10 +4,13 @@ import '@/app/ui/index.css'
 import Image from 'next/image'
 import s from '@/app/ui/main.module.css'
 import { useState, useLayoutEffect } from 'react'
+import { MuiInput } from '@/app/components'
 
 
 export const HomeSearch = () => {
     const [isLargeScreen, setIsLargeScreen] = useState(false)
+    const [projType, setProjType] = useState<'ready' | 'new'>('ready')
+    const [cb, setCb] = useState('')
 
     useLayoutEffect(() => {
         const handleResize = () => setIsLargeScreen(window.innerWidth >= 640)
@@ -19,21 +22,45 @@ export const HomeSearch = () => {
     return isLargeScreen ? (
         <>
             <div className='px-[3vw] sm:px-[85px] max-[639px]:mx-[3vw] mt-[400px] xl:mt-[200px] max-[639px]:w-full max-[639px]:text-center flex text-sm'>
-                <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] border-b-[3px] border-solid border-[#eddfd0] ${s.hoverable}`}>Ready</div>
-                <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] border-b border-solid border-[#eddfd0] ${s.hoverable}`}>New Projects</div>
+                <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] ${projType === 'ready'? 'border-b-[3px]': 'border-b'} border-solid border-[#eddfd0] ${s.hoverable} cursor-pointer`}
+                    onClick={() => setProjType('ready')}>Ready</div>
+                <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] ${projType === 'new'? 'border-b-[3px]': 'border-b'} border-solid border-[#eddfd0] ${s.hoverable} cursor-pointer`}
+                    onClick={() => setProjType('new')}>New Projects</div>
             </div>
             <div className='mt-[15px] ml-[-13px] px-[3vw] sm:px-[85px]  flex flex-wrap text-sm'>
                 <button className={`py-3 pl-2 grid place-items-center grid-cols-2 gap-1 rounded-3xl ${s.hoverable}`}>
                     Buy
                     <Image src='/slim-properties/icons/expand_more.svg' alt='Arrow down' width={32} height={32} className='ml-[-10px] mr-[12px]' />
                 </button>
-                <button className={`mr-[11px] p-3 rounded-3xl ${s.hoverable}`}>Community or Building</button>
+                <input type="email" name="email" id="email_input" value={cb} onChange={(e) => setCb(e.target.value)} className={`mx-[11px] w-[200px] block border-0 py-1.5 bg-transparent
+                    ring-1 ring-inset ring-transparent focus:ring-1 focus:ring-inset focus:ring-[#EDDFD0] sm:leading-6
+                    transition duration-200 ease-in-out placeholder-[#eddfd0] ${s.hoverable}`} placeholder='Community or Building'/>
+                {/* <div className={`mr-[11px] relative m-4 max-w-[fit-content] group ${s.hoverable}`}>
+                    <input type='text' className="outline-none px-3 py-3 peer ring-transparent bg-transparent border-0" placeholder=" " value={cb} onChange={(e) => setCb(e.target.value)} />
+                    <label className="absolute left-[9px] top-px text-sm text-[#EDDFD0] transition-all duration-300 px-1 transform -translate-y-1/2 pointer-events-none 
+                        peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-xl group-focus-within:!top-px group-focus-within:!text-sm group-focus-within:!text-[#EDDFD0]">
+                        Community or Building
+                    </label>
+                    <fieldset className="inset-0 absolute border-0 border-[#EDDFD0] rounded pointer-events-none mt-[-9px] invisible peer-placeholder-shown:visible 
+                        group-focus-within:!border-[#EDDFD0] group-focus-within:border-2">
+                        <legend className="ml-2 px-0 text-sm transition-all duration-300 invisible max-w-[0.01px] group-focus-within:max-w-full group-focus-within:px-1 whitespace-nowrap">Label</legend>
+                    </fieldset>
+                    <fieldset className="inset-0 absolute rounded pointer-events-none mt-[-9px] visible peer-placeholder-shown:invisible group-focus-within:border-2 group-focus-within:!border-[#EDDFD0]">
+                        <legend className="ml-2 text-sm invisible px-1 max-w-full whitespace-nowrap">
+                            Community or Building
+                        </legend>
+                    </fieldset>
+                </div> */}
                 <div className={`${s.line}`} />
-                <button className={`mx-[16px] p-3 rounded-3xl ${s.hoverable}`}>Location</button>
+                <input type="email" name="email" id="email_input" value={cb} onChange={(e) => setCb(e.target.value)} className={`mx-[11px] w-[200px] block border-0 py-1.5 bg-transparent
+                    ring-1 ring-inset ring-transparent focus:ring-1 focus:ring-inset focus:ring-[#EDDFD0] sm:leading-6
+                    transition duration-200 ease-in-out placeholder-[#eddfd0] ${s.hoverable}`} placeholder='Location'/>
                 <div className={`${s.line}`} />
-                <button className={`mx-[18px] p-3 rounded-3xl ${s.hoverable}`}>Price</button>
+                <input type="email" name="email" id="email_input" value={cb} onChange={(e) => setCb(e.target.value)} className={`mx-[11px] w-[200px] block border-0 py-1.5 bg-transparent
+                    ring-1 ring-inset ring-transparent focus:ring-1 focus:ring-inset focus:ring-[#EDDFD0] sm:leading-6
+                    transition duration-200 ease-in-out placeholder-[#eddfd0] ${s.hoverable}`} placeholder='Price'/>
                 <div className={`${s.line}`} />
-                <button className={`py-3 pl-2 grid place-items-center grid-cols-2 gap-1 rounded-3xl ${s.hoverable}`}>
+                <button className={`mx-[18px] py-3 pl-2 grid place-items-center grid-cols-2 gap-1 rounded-3xl ${s.hoverable}`}>
                     Search
                     <Image src='/slim-properties/icons/search.svg' alt='Search icon' width={17} height={17} className='ml-[-20px]' />
                 </button>

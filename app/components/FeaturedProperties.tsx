@@ -3,12 +3,15 @@
 import Image from 'next/image'
 import '@/app/ui/index.css'
 import { PropertyCard } from '@/app/components'
+import Link from 'next/link'
 import s from '@/app/ui/main.module.css'
 import { useState, useLayoutEffect } from 'react'
 
 
 export const FeaturedProperties = () => {
     const [isLargeScreen, setIsLargeScreen] = useState(false)
+    const [propType, setPropType] = useState<'villas' | 'apartments' | 'all'>('villas')
+    const [action, setAction] = useState<'rent' | 'buy' | 'sell'>('buy')
 
     useLayoutEffect(() => {
         const handleResize = () => setIsLargeScreen(window.innerWidth >= 640)
@@ -27,14 +30,14 @@ export const FeaturedProperties = () => {
                 {isLargeScreen ? (
                     <div className='text-[12px] mt-0 sm:mt-[39px] flex-wrap'>
                         <div className='flex'>
-                            <div className={`${s.prop} ${s.propActive} ${s.hoverable}`}>Villas</div>
-                            <span className={`${s.prop} ${s.hoverable}`}>Apartments</span>
-                            <span className={`${s.prop} ${s.hoverable}`}>View All</span>
+                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${propType === 'villas'? 'border-b-[3px]': 'border-b'}`} onClick={() => setPropType('villas')}>Villas</div>
+                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${propType === 'apartments'? 'border-b-[3px]': 'border-b'}`} onClick={() => setPropType('apartments')}>Apartments</div>
+                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${propType === 'all'? 'border-b-[3px]': 'border-b'}`} onClick={() => setPropType('all')}>View All</div>
                         </div>
                         <div className='flex mt-[17px]'>
-                            <span className={`${s.prop} ${s.hoverable}`}>Rent</span>
-                            <span className={`${s.prop} ${s.hoverable} ${s.propActive}`}>Buy</span>
-                            <span className={`${s.prop} ${s.hoverable}`}>Sell</span>
+                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${action === 'rent'? 'border-b-[3px]': 'border-b'}`} onClick={() => setAction('rent')}>Rent</div>
+                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${action === 'buy'? 'border-b-[3px]': 'border-b'}`} onClick={() => setAction('buy')}>Buy</div>
+                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${action === 'sell'? 'border-b-[3px]': 'border-b'}`} onClick={() => setAction('sell')}>Sell</div>
                         </div>
                     </div>
                 ) : (
@@ -90,7 +93,9 @@ export const FeaturedProperties = () => {
                     <div className='mt-[43px] w-full sm:w-[304px]'>
                         <div className={`${s.lastProperty}`}>
                             <Image src='/slim-properties/images/property.jpg' alt='Photo of a property' width={304} height={293} className='max-[639px]:w-full' />
-                            <div className={`${s.backdrop} text-[14px]`}>Explore All</div>
+                            <Link href='/projects/ready'>
+                                <div className={`${s.backdrop} text-[14px]`}>Explore All</div>
+                            </Link>
                         </div>
                     </div>
                 ) : (

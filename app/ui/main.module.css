@@ -92,7 +92,6 @@
 .prop {
     width: 93px;
     padding: 4px 0 4px 0;
-    border-bottom: #eddfd0 solid 1px;
     text-align: center;
 }
 
@@ -148,8 +147,8 @@
     content: "";
     position: absolute;
     left: 0;
-    bottom: -8px;
-    width: 49px;
+    bottom: 0;
+    width: 29px;
     height: 1px;
     background: #EDDFD0;
 }
