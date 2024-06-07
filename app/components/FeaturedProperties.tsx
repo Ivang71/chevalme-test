@@ -26,27 +26,27 @@ export const FeaturedProperties = () => {
                 {isLargeScreen ? (
                     <div className='text-[12px] mt-0 sm:mt-[39px] flex-wrap'>
                         <div className='flex'>
-                            <div className={`${s.prop} ${s.propActive}`}>Villas</div>
-                            <span className={`${s.prop}`}>Apartments</span>
-                            <span className={`${s.prop}`}>View All</span>
+                            <div className={`${s.prop} ${s.propActive} ${s.hoverable}`}>Villas</div>
+                            <span className={`${s.prop} ${s.hoverable}`}>Apartments</span>
+                            <span className={`${s.prop} ${s.hoverable}`}>View All</span>
                         </div>
                         <div className='flex mt-[17px]'>
-                            <span className={`${s.prop}`}>Rent</span>
-                            <span className={`${s.prop} ${s.propActive}`}>Buy</span>
-                            <span className={`${s.prop}`}>Sell</span>
+                            <span className={`${s.prop} ${s.hoverable}`}>Rent</span>
+                            <span className={`${s.prop} ${s.hoverable} ${s.propActive}`}>Buy</span>
+                            <span className={`${s.prop} ${s.hoverable}`}>Sell</span>
                         </div>
                     </div>
                 ) : (
                     <>
                         <div className='w-full text-center flex text-sm'>
-                            <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] border-b-[3px] border-solid border-[#eddfd0]`}>Villas</div>
-                            <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] border-b border-solid border-[#eddfd0]`}>Apartments</div>
-                            <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] border-b border-solid border-[#eddfd0]`}>View All</div>
+                            <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] border-b-[3px] border-solid border-[#eddfd0] ${s.hoverable}`}>Villas</div>
+                            <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] border-b border-solid border-[#eddfd0] ${s.hoverable}`}>Apartments</div>
+                            <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] border-b border-solid border-[#eddfd0] ${s.hoverable}`}>View All</div>
                         </div>
                         <div className='w-full text-center flex text-sm'>
-                            <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] border-b border-solid border-[#eddfd0]`}>Rent</div>
-                            <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] border-b-[3px] border-solid border-[#eddfd0]`}>Buy</div>
-                            <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] border-b border-solid border-[#eddfd0]`}>Sell</div>
+                            <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] border-b border-solid border-[#eddfd0] ${s.hoverable}`}>Rent</div>
+                            <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] border-b-[3px] border-solid border-[#eddfd0] ${s.hoverable}`}>Buy</div>
+                            <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] border-b border-solid border-[#eddfd0] ${s.hoverable}`}>Sell</div>
                         </div>
                     </>
                 )}

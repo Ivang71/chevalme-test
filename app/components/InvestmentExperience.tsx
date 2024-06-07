@@ -11,7 +11,7 @@ export const InvestmentExperience = () => {
                     <div>properties — in collaboration with top developers and</div>
                     <div>investors- which allows them to identify the...</div>
                 </div>
-                <div className={`${s.readMore} mt-[15px] text-xs`}>Read More</div>
+                <div className={`${s.readMore} mt-[15px] w-fit text-xs ${s.hoverable}`}>Read More</div>
             </div>
             <div className={`${s.serviceBlock} relative sm:w-[380px]`}>
                 <div className='text-[20px]'>Current Services</div>
@@ -26,7 +26,7 @@ export const InvestmentExperience = () => {
             <div className={`sm:w-[380px]`}>
                 <div className='text-[20px]'>After Sales</div>
                 <div className='mt-[20px] text-white text-xs leading-[170%] font-[200]'>But the efficiency of this remarkable sales team does not end with closing deals. Enter the equally exceptional after sales team – a dedicated group of experts who understand the importance of ...</div>
-                <div className={`${s.readMore} mt-[15px] text-xs`}>Read More</div>
+                <div className={`${s.readMore} mt-[15px] w-fit text-xs ${s.hoverable}`}>Read More</div>
             </div>
         </div>
     )

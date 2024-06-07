@@ -4,7 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState, useLayoutEffect } from 'react'
-import styles from '@/app/ui/home.module.css'
+import s from '@/app/ui/home.module.css'
+import sMain from '@/app/ui/main.module.css'
 import '@/app/ui/index.css'
 
 const routes = ['/', '/about', '/projects/ready', '/services', '/contact']
@@ -55,8 +56,7 @@ export const Header = () => {
             <nav className='z-50 mt-[41px] flex flex-wrap gap-[1px] text-sm'>
                 {routes.map((route) => (
                     <Link key={route} href={route + '/'}>
-                        <div className={`${isRouteActive(route, path) ? styles.navActive : ''}
-                        cursor-pointer p-4 rounded-xl hover:bg-white/30 active:bg-white/60 hover:text-gray-900 active:text-black transition duration-200 ease-in-out`}>
+                        <div className={`${isRouteActive(route, path) ? s.navActive : ''} ${sMain.hoverable} cursor-pointer p-4 rounded-xl`}>
                             <span>{routeNameMapping[route]}</span>
                         </div>
                     </Link>
@@ -87,7 +87,7 @@ export const Header = () => {
                 <nav className={`mt-[36px] flex flex-col gap-[1px] lg:hidden ${isOpen ? 'flex' : 'hidden'} text-[#827161] gotham font-[600] text-[20px] text-center`}>
                     {routes.map((route) => (
                         <Link key={route} href={route + '/'} onClick={toggleMenu}>
-                            <div className={`${isRouteActive(route, path) ? styles.menuNavActive : ''}
+                            <div className={`${isRouteActive(route, path) ? s.menuNavActive : ''}
                   cursor-pointer p-4 rounded-xl hover:bg-white/30 active:bg-white/60 hover:text-gray-900 active:text-black transition duration-200 ease-in-out`}>
                                 <span>{routeNameMapping[route]}</span>
                             </div>
