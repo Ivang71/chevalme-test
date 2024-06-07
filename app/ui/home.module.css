@@ -26,7 +26,6 @@
 
 .tint {
     content: "";
-    z-index: -1;
     position: absolute;
     inset: 0;
     background: linear-gradient(to right, rgba(147, 130, 112, 0.7), rgba(147, 130, 112, 0));

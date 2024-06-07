@@ -56,7 +56,7 @@ export const Header = () => {
             <nav className='z-50 mt-[41px] flex flex-wrap gap-[1px] text-sm'>
                 {routes.map((route) => (
                     <Link key={route} href={route + '/'}>
-                        <div className={`${isRouteActive(route, path) ? s.navActive : ''} ${sMain.hoverable} cursor-pointer p-4 rounded-xl`}>
+                        <div className={`${isRouteActive(route, path) ? s.navActive : ''} ${sMain.headerNav} cursor-pointer p-4 rounded-xl`}>
                             <span>{routeNameMapping[route]}</span>
                         </div>
                     </Link>

@@ -1,24 +1,19 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import '@/app/ui/index.css'
+import s from '@/app/ui/main.module.css'
 import styles from '@/app/ui/home.module.css'
-import { Year } from '@/app/components'
+import { Year, FooterEmailForm } from '@/app/components'
 
 export const Footer = () => {
     return (
-        <footer className={`relative z-[-1] min-[1440px]-h-[477px] bg-cover max-[639px]:bg-bottom`} style={{ backgroundImage: 'url("/slim-properties/images/ft-bg.jpeg")' }}>
-            <div className={`${styles.tint}`}></div>
-            <div className='z-50 px-[3vw] sm:px-[80px] pt-[91px] flex flex-wrap gap-y-10 gap-x-2'>
+        <footer className={`relative min-[1440px]-h-[477px] bg-cover max-[639px]:bg-bottom`} style={{ backgroundImage: 'url("/slim-properties/images/ft-bg.jpeg")' }}>
+            <div className={` ${styles.tint}`}></div>
+            <div className='z-50 relative px-[3vw] sm:px-[80px] pt-[91px] flex flex-wrap gap-y-10 gap-x-2'>
                 <div className='max-w-full'>
                     <div className='sm:w-[391px] gotham text-[25px] font-[200] leading-[164%]'>A World of Leading Expertise Exclusively yours</div>
                     <div className='sm:w-[508px] mt-[38px] text-[25px] font-[500] leading-[147%]'>Sign up for our newsletter to stay updated with what’s new in UAE real estate</div>
-                    <div>
-                        <div className='mt-[19px] text-sm font-[200]'>Enter your email</div>
-                        {/* <input type="email" className='appearance-none' /> */}
-                        <div className='mt-[-15px] flex gap-1 items-end'>
-                            <div className={`${styles.emailUnderline}`}></div>
-                            <button className='py-[16px] px-[35px] bg-[#938270] rounded-[40px] text-sm'>Sign&nbsp;Up</button>
-                        </div>
-                    </div>
+                    <FooterEmailForm/>
                 </div>
                 <div className='sm:ml-[67px] max-[639px]:w-full text-sm font-[200]'>
                     <div className='font-[700]'>EXPLORE RESIDENTIAL IN</div>
@@ -32,13 +27,13 @@ export const Footer = () => {
                 </div>
                 <div className='sm:ml-[67px] max-[639px]:w-full text-sm font-[200]'>
                     <div className='font-[700]'>SLIM PROPERTY</div>
-                    <div className='mt-[7px]'>About us</div>
-                    <div className='mt-[6px]'>Services</div>
-                    <div className='mt-[6px]'>Investment</div>
-                    <div className='mt-[6px]'>Sell your property</div>
-                    <div className='mt-[6px]'>Careers</div>
-                    <div className='mt-[6px]'>Blogs & news</div>
-                    <div className='mt-[6px]'>Contact us</div>
+                    <Link href='/about' className={`mt-[7px] block w-fit ${s.hoverable}`}>About us</Link>
+                    <Link href='/services' className={`mt-[6px] block w-fit ${s.hoverable}`}>Services</Link>
+                    <Link href='/invest' className={`mt-[6px] block w-fit ${s.hoverable}`}>Investment</Link>
+                    <Link href='/sell' className={`mt-[6px] block w-fit ${s.hoverable}`}>Sell your property</Link>
+                    <Link href='/careers' className={`mt-[6px] block w-fit ${s.hoverable}`}>Careers</Link>
+                    <Link href='/news' className={`mt-[6px] block w-fit ${s.hoverable}`}>Blogs & news</Link>
+                    <Link href='/contact' className={`mt-[6px] block w-fit ${s.hoverable}`}>Contact us</Link>
                 </div>
                 <div className='sm:ml-[78px] w-[252px] text-sm font-[200]'>
                     <Image src='/slim-properties/logos/slim.svg' alt='Slim Properties logo' width={142} height={71} className='ml-[-4px]' />
@@ -56,7 +51,7 @@ export const Footer = () => {
             <div className={`${styles.footerLine} mt-[40px] font-[200]`}></div>
             <div className='mt-[26px] ml-[3vw] pb-6 sm:pb-12 sm:ml-[80px] w-[calc(100%-3vw)] sm:w-[calc(100%-160px)] flex justify-between gap-x-5 gap-y-1 max-[639px]:flex-wrap text-sm font-[200]'>
                 <div className={`${styles.designedBy}`}>Designed & Developed By Cheval</div>
-                <div className={`${styles.copyright}`}>© <Year/> Slim Properties. All rights reserved</div>
+                <div className={`${styles.copyright}`}>© <Year /> Slim Properties. All rights reserved</div>
             </div>
         </footer>
     )

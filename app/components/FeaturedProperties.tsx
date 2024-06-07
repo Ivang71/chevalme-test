@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import '@/app/ui/index.css'
+import { PropertyCard } from '@/app/components'
 import s from '@/app/ui/main.module.css'
 import { useState, useLayoutEffect } from 'react'
 
@@ -52,72 +53,39 @@ export const FeaturedProperties = () => {
                 )}
             </div>
             <div className='flex flex-wrap'>
-                <div className={`${isLargeScreen ? s.propPic : ''} mt-[43px] w-full sm:w-[304px]`}>
-                    <Image src='/slim-properties/images/property.jpg' alt='Photo of a property' width={304} height={293} className='max-[639px]:w-full' />
-                    <div className='mt-[15px] ml-[10px]'>
-                        <div className=' text-[15px] font-[700]'>Canal View Villa</div>
-                        <div className='text-xs'>Vezul Residence, Business Bay.</div>
-                        <div className='mt-[4px] flex gap-[17px] text-xs'>
-                            <div>
-                                <Image src='/slim-properties/icons/bed.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
-                                2
-                            </div>
-                            <div>
-                                <Image src='/slim-properties/icons/bathtub.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
-                                2
-                            </div>
-                            <div>
-                                <Image src='/slim-properties/icons/crop_free.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
-                                1,273 sqft
-                            </div>
-                        </div>
-                        <div className='text-[15px] mt-[3px] font-[700]'>AED 1,560.000</div>
-                    </div>
-                </div>
-                <div className={`${isLargeScreen ? s.propPic : ''} mt-[43px] w-full sm:w-[304px]`}>
-                    <Image src='/slim-properties/images/property.jpg' alt='Photo of a property' width={304} height={293} className='max-[639px]:w-full' />
-                    <div className='mt-[15px] ml-[10px]'>
-                        <div className=' text-[15px] font-[700]'>Canal View Villa</div>
-                        <div className='text-xs'>Vezul Residence, Business Bay.</div>
-                        <div className='mt-[4px] flex gap-[17px] text-xs'>
-                            <div>
-                                <Image src='/slim-properties/icons/bed.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
-                                2
-                            </div>
-                            <div>
-                                <Image src='/slim-properties/icons/bathtub.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
-                                2
-                            </div>
-                            <div>
-                                <Image src='/slim-properties/icons/crop_free.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
-                                1,273 sqft
-                            </div>
-                        </div>
-                        <div className='text-[15px] mt-[3px] font-[700]'>AED 1,560.000</div>
-                    </div>
-                </div>
-                <div className={`${isLargeScreen ? s.propPic : ''} mt-[43px] w-full sm:w-[304px]`}>
-                    <Image src='/slim-properties/images/property.jpg' alt='Photo of a property' width={304} height={293} className='max-[639px]:w-full' />
-                    <div className='mt-[15px] ml-[10px]'>
-                        <div className=' text-[15px] font-[700]'>Canal View Villa</div>
-                        <div className='text-xs'>Vezul Residence, Business Bay.</div>
-                        <div className='mt-[4px] flex gap-[17px] text-xs'>
-                            <div>
-                                <Image src='/slim-properties/icons/bed.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
-                                2
-                            </div>
-                            <div>
-                                <Image src='/slim-properties/icons/bathtub.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
-                                2
-                            </div>
-                            <div>
-                                <Image src='/slim-properties/icons/crop_free.svg' alt='Bed icon' width={17} height={17} className='mr-[2px] inline' />
-                                1,273 sqft
-                            </div>
-                        </div>
-                        <div className='text-[15px] mt-[3px] font-[700]'>AED 1,560.000</div>
-                    </div>
-                </div>
+                <PropertyCard
+                    id='123testid456'
+                    imageUrl='/slim-properties/images/property.jpg'
+                    altText='Photo of a property'
+                    title='Canal View Villa'
+                    location='Vezul Residence, Business Bay.'
+                    bedrooms={2}
+                    bathrooms={2}
+                    area='1,273 sqft'
+                    price='AED 1,560.000'
+                />
+                <PropertyCard
+                    id='123testid456'
+                    imageUrl='/slim-properties/images/property.jpg'
+                    altText='Photo of a property'
+                    title='Canal View Villa'
+                    location='Vezul Residence, Business Bay.'
+                    bedrooms={2}
+                    bathrooms={2}
+                    area='1,273 sqft'
+                    price='AED 1,560.000'
+                />
+                <PropertyCard
+                    id='123testid456'
+                    imageUrl='/slim-properties/images/property.jpg'
+                    altText='Photo of a property'
+                    title='Canal View Villa'
+                    location='Vezul Residence, Business Bay.'
+                    bedrooms={2}
+                    bathrooms={2}
+                    area='1,273 sqft'
+                    price='AED 1,560.000'
+                />
                 {isLargeScreen ? (
                     <div className='mt-[43px] w-full sm:w-[304px]'>
                         <div className={`${s.lastProperty}`}>
