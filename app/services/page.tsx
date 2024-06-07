@@ -22,7 +22,7 @@ export default async function ServicesPage() {
             </div>
             <div className="mb-[48px] max-w-[100%]">
                 <div className='flex flex-wrap gap-x-2 gap-y-14 mt-[35px] pb-[37px] xs border-b border-solid border-[#EDDFD0] border-opacity-50'>
-                    <div className={`${s.serviceBlock} sm:w-[380px]`}>
+                    <div className={`${s.serviceBlock} relative sm:w-[380px]`}>
                         <div className='text-[20px]'>Sales</div>
                         <div className='mt-[20px] text-white text-xs leading-[170%]'>
                             <div>Slim Property team of professional agents boast a</div>
@@ -36,7 +36,7 @@ export default async function ServicesPage() {
                             <div>value.</div>
                         </div>
                     </div>
-                    <div className={`${s.serviceBlock} sm:w-[380px]`}>
+                    <div className={`${s.serviceBlock} relative sm:w-[380px]`}>
                         <div className='text-[20px]'>Current Services</div>
                         <div className='mt-[20px] text-white text-xs leading-[170%]'>
 

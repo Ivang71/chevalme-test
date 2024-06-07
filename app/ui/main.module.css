@@ -154,10 +154,6 @@
     background: #EDDFD0;
 }
 
-.serviceBlock {
-    position: relative;
-}
-
 .serviceBlock::after {
     content: "";
     position: absolute;

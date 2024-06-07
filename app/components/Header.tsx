@@ -28,6 +28,8 @@ const useMenuState = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen)
         body?.classList.toggle('overflow-hidden')
+        const relatives = (typeof window === "undefined") ? null : document.querySelectorAll("[class*='relative']")
+        relatives?.forEach((e) => e.classList.toggle('opacity-0'))
     }
     return { isOpen, toggleMenu }
 }
@@ -46,11 +48,11 @@ export const Header = () => {
     }, [])
 
     return isLargeScreen ? (
-        <div className={`mb-[50px] sm:mb-0 px-[3vw] sm:px-[85px] h-[340px] pt-[30px] lg:pt-[89px] flex lg:flex-col`}>
+        <div className={` mb-[50px] sm:mb-0 px-[3vw] sm:px-[85px] h-[340px] pt-[30px] lg:pt-[89px] flex lg:flex-col`}>
             <Link href='/'>
                 <Image src='/slim-properties/logos/slim.svg' alt='Slim Properties logo' width={142} height={71} className='ml-[-4px]' />
             </Link>
-            <nav className='mt-[41px] flex flex-wrap gap-[1px] text-sm'>
+            <nav className='z-50 mt-[41px] flex flex-wrap gap-[1px] text-sm'>
                 {routes.map((route) => (
                     <Link key={route} href={route + '/'}>
                         <div className={`${isRouteActive(route, path) ? styles.navActive : ''}

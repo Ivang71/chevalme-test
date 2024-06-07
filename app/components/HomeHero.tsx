@@ -7,7 +7,7 @@ export const HomeHero = () => {
     return (
         <div className="min-[1630px]:min-w-[1440px] max-[1629px]:w-full">
             <div className='w-[100vw] relative gotham text-[50px] md:text-[85px] leading-[43px] md:leading-[88px] font-[700] flex'>
-                <div className=' px-[3vw] sm:px-[85px]'>
+                <div className='px-[3vw] sm:px-[85px]'>
                     <div className='max-[767px]:ml-[3vw]'>Timeless</div>
                     <div className='max-[767px]:ml-[3vw]'>luxury</div>
                     <div className='max-[767px]:ml-[3vw]'>re-imagined</div>

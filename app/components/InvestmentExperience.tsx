@@ -3,7 +3,7 @@ import s from '@/app/ui/main.module.css'
 export const InvestmentExperience = () => {
     return (
         <div className='flex flex-wrap gap-x-2 gap-y-14 mt-[35px]'>
-            <div className={`${s.serviceBlock} sm:w-[380px]`}>
+            <div className={`${s.serviceBlock} relative sm:w-[380px]`}>
                 <div className='text-[20px]'>Sales</div>
                 <div className='mt-[20px] text-white text-xs leading-[170%] font-[200]'>
                     <div>Slim Property team of professional agents boast a</div>
@@ -13,7 +13,7 @@ export const InvestmentExperience = () => {
                 </div>
                 <div className={`${s.readMore} mt-[15px] text-xs`}>Read More</div>
             </div>
-            <div className={`${s.serviceBlock} sm:w-[380px]`}>
+            <div className={`${s.serviceBlock} relative sm:w-[380px]`}>
                 <div className='text-[20px]'>Current Services</div>
                 <div className='mt-[20px] text-white text-xs leading-[170%] font-[200]'>
                     <div>Residential Real Estate Investment Advisory</div>
