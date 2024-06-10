@@ -11,6 +11,9 @@ export const HomeSearch = () => {
     const [isLargeScreen, setIsLargeScreen] = useState(false)
     const [projType, setProjType] = useState<'ready' | 'new'>('ready')
     const [cb, setCb] = useState('')
+    const [location, setLocation] = useState('')
+    const [price, setPrice] = useState('')
+    const [isBuyDropdownOpen, setIsBuyDropdownOpen] = useState(false);
 
     useLayoutEffect(() => {
         const handleResize = () => setIsLargeScreen(window.innerWidth >= 640)
@@ -32,8 +35,8 @@ export const HomeSearch = () => {
                     Buy
                     <Image src='/slim-properties/icons/expand_more.svg' alt='Arrow down' width={32} height={32} className='ml-[-10px] mr-[12px]' />
                 </button>
-                <input type="email" name="email" id="email_input" value={cb} onChange={(e) => setCb(e.target.value)} className={`mx-[11px] w-[200px] block border-0 py-1.5 bg-transparent
-                    ring-1 ring-inset ring-transparent focus:ring-1 focus:ring-inset focus:ring-[#EDDFD0] sm:leading-6
+                <input type="text" name="cb" id="cb_input" value={cb} onChange={(e) => setCb(e.target.value)} className={`mx-[11px] w-[200px] block border-0 py-1.5 bg-transparent
+                    ring-1 ring-inset ring-transparent focus:ring-1 focus:ring-inset focus:ring-[#EDDFD0] hover:ring-[#EDDFD0]/50 sm:leading-6
                     transition duration-200 ease-in-out placeholder-[#eddfd0] ${s.hoverable}`} placeholder='Community or Building'/>
                 {/* <div className={`mr-[11px] relative m-4 max-w-[fit-content] group ${s.hoverable}`}>
                     <input type='text' className="outline-none px-3 py-3 peer ring-transparent bg-transparent border-0" placeholder=" " value={cb} onChange={(e) => setCb(e.target.value)} />
@@ -52,12 +55,12 @@ export const HomeSearch = () => {
                     </fieldset>
                 </div> */}
                 <div className={`${s.line}`} />
-                <input type="email" name="email" id="email_input" value={cb} onChange={(e) => setCb(e.target.value)} className={`mx-[11px] w-[200px] block border-0 py-1.5 bg-transparent
-                    ring-1 ring-inset ring-transparent focus:ring-1 focus:ring-inset focus:ring-[#EDDFD0] sm:leading-6
+                <input type="text" name="location" id="location_input" value={location} onChange={(e) => setLocation(e.target.value)} className={`mx-[11px] w-[200px] block border-0 py-1.5 bg-transparent
+                    ring-1 ring-inset ring-transparent focus:ring-1 focus:ring-inset focus:ring-[#EDDFD0] hover:ring-[#EDDFD0]/50 sm:leading-6
                     transition duration-200 ease-in-out placeholder-[#eddfd0] ${s.hoverable}`} placeholder='Location'/>
                 <div className={`${s.line}`} />
-                <input type="email" name="email" id="email_input" value={cb} onChange={(e) => setCb(e.target.value)} className={`mx-[11px] w-[200px] block border-0 py-1.5 bg-transparent
-                    ring-1 ring-inset ring-transparent focus:ring-1 focus:ring-inset focus:ring-[#EDDFD0] sm:leading-6
+                <input type="text" name="price" id="price_input" value={price} onChange={(e) => setPrice(e.target.value)} className={`mx-[11px] w-[200px] block border-0 py-1.5 bg-transparent
+                    ring-1 ring-inset ring-transparent focus:ring-1 focus:ring-inset focus:ring-[#EDDFD0] hover:ring-[#EDDFD0]/50 sm:leading-6
                     transition duration-200 ease-in-out placeholder-[#eddfd0] ${s.hoverable}`} placeholder='Price'/>
                 <div className={`${s.line}`} />
                 <button className={`mx-[18px] py-3 pl-2 grid place-items-center grid-cols-2 gap-1 rounded-3xl ${s.hoverable}`}>

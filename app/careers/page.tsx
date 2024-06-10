@@ -57,10 +57,13 @@ export default async function CareersPage() {
                         </button>
                     </div>
                 </div>
-                <div className='p-2 flex flex-col items-end gotham text-[25px] font-[200]'>
-                    <Image src='/slim-properties/icons/arrow_outward.svg' alt='Outward arrow' width={48} height={48} />
-                    Apply
-                </div>
+                <Link href={`/careers/position?id=marketing-executive`}>
+                    <div className='p-2 h-fit rounded-3xl flex flex-col items-end gotham text-[25px] font-[200] hover:bg-white/30 active:bg-white/60 hover:text-gray-700
+                    active:text-black transition duration-200 ease-in-out'>
+                        <Image src='/slim-properties/icons/arrow_outward.svg' alt='Outward arrow' width={48} height={48} />
+                        Apply
+                    </div>
+                </Link>
             </div>
             <div className='mt-[21px] pb-[35px] flex flex-wrap sm:flex-nowrap justify-between gap-x-[100px] gap-y-[20px] border-b border-solid border-[#eddfd0] border-opacity-60'>
                 <div>
@@ -82,10 +85,13 @@ export default async function CareersPage() {
                         </button>
                     </div>
                 </div>
-                <div className='p-2 flex flex-col items-end gotham text-[25px] font-[200]'>
-                    <Image src='/slim-properties/icons/arrow_outward.svg' alt='Outward arrow' width={48} height={48} />
-                    Apply
-                </div>
+                <Link href={`/careers/position?id=marketing-executive`}>
+                    <div className='p-2 h-fit rounded-3xl flex flex-col items-end gotham text-[25px] font-[200] hover:bg-white/30 active:bg-white/60 hover:text-gray-700
+                    active:text-black transition duration-200 ease-in-out'>
+                        <Image src='/slim-properties/icons/arrow_outward.svg' alt='Outward arrow' width={48} height={48} />
+                        Apply
+                    </div>
+                </Link>
             </div>
             <div className='mt-[21px] pb-[35px] flex flex-wrap sm:flex-nowrap justify-between gap-x-[100px] gap-y-[20px] border-b border-solid border-[#eddfd0] border-opacity-60'>
                 <div>
@@ -107,10 +113,13 @@ export default async function CareersPage() {
                         </button>
                     </div>
                 </div>
-                <div className='p-2 flex flex-col items-end gotham text-[25px] font-[200]'>
-                    <Image src='/slim-properties/icons/arrow_outward.svg' alt='Outward arrow' width={48} height={48} />
-                    Apply
-                </div>
+                <Link href={`/careers/position?id=marketing-executive`}>
+                    <div className='p-2 h-fit rounded-3xl flex flex-col items-end gotham text-[25px] font-[200] hover:bg-white/30 active:bg-white/60 hover:text-gray-700
+                    active:text-black transition duration-200 ease-in-out'>
+                        <Image src='/slim-properties/icons/arrow_outward.svg' alt='Outward arrow' width={48} height={48} />
+                        Apply
+                    </div>
+                </Link>
             </div>
             <div className='mt-[21px] pb-[35px] flex flex-wrap sm:flex-nowrap justify-between gap-x-[100px] gap-y-[20px] border-b border-solid border-[#eddfd0] border-opacity-60'>
                 <div>
@@ -132,10 +141,13 @@ export default async function CareersPage() {
                         </button>
                     </div>
                 </div>
-                <div className='p-2 flex flex-col items-end gotham text-[25px] font-[200]'>
-                    <Image src='/slim-properties/icons/arrow_outward.svg' alt='Outward arrow' width={48} height={48} />
-                    Apply
-                </div>
+                <Link href={`/careers/position?id=marketing-executive`}>
+                    <div className='p-2 h-fit rounded-3xl flex flex-col items-end gotham text-[25px] font-[200] hover:bg-white/30 active:bg-white/60 hover:text-gray-700
+                    active:text-black transition duration-200 ease-in-out'>
+                        <Image src='/slim-properties/icons/arrow_outward.svg' alt='Outward arrow' width={48} height={48} />
+                        Apply
+                    </div>
+                </Link>
             </div>
             <div className='mt-[65px] w-full gotham text-[50px] sm:text-[69px] leading-[88px] font-[700]'>
                 <div>Apply</div>

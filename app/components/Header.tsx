@@ -50,7 +50,7 @@ export const Header = () => {
 
     return isLargeScreen ? (
         <div className={` mb-[50px] sm:mb-0 px-[3vw] sm:px-[85px] h-[340px] pt-[30px] lg:pt-[89px] flex lg:flex-col`}>
-            <Link href='/'>
+            <Link href='/' className='w-fit'>
                 <Image src='/slim-properties/logos/slim.svg' alt='Slim Properties logo' width={142} height={71} className='ml-[-4px]' />
             </Link>
             <nav className='z-50 mt-[41px] flex flex-wrap gap-[1px] text-sm'>

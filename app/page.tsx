@@ -10,10 +10,10 @@ export default async function Page() {
             <HomeHero />
             <div className='px-[3vw] sm:px-[85px] flex flex-col items-center'>
                 <FeaturedProperties />
-                <div className='max-[639px]:mt-[46px]'>
+                <div className='max-[639px]:mt-[46px] mt-[86px]'>
                     <OurServices />
                 </div>
-                <div className='max-[639px]:mt-[64px]'>
+                <div className='max-[639px]:mt-[64px] mt-[86px]'>
                     <Instagram />
                 </div>
             </div>
