@@ -38,21 +38,20 @@ export const Select = ({ options, value, onChange }: CustomSelectProps) => {
             >
                 {capitalize(value)}
                 <Image src='/slim-properties/icons/expand_more.svg' alt='Arrow down' width={32} height={32}
-                    className={`ml-[-10px] mr-[12px] transition duration-200 ${isOpen ? 'rotate-180' : ''}`}/>
+                    className={`ml-[-10px] mr-[12px] transition duration-200 ${isOpen ? 'rotate-180' : ''}`} />
             </button>
-            {isOpen && (
-                <ul className="absolute top-full left-0 w-full rounded shadow mt-1 bg-[#eddfd0] z-10">
-                    {options.map((option) => (
-                        <li
-                            key={option.value}
-                            className="px-2 py-2 transition duration-200 hover:bg-[#fff9f3] text-[#827160]"
-                            onClick={() => handleSelect(option.value)}
-                        >
-                            {option.label}
-                        </li>
-                    ))}
-                </ul>
-            )}
+            <ul className={`absolute top-full left-0 w-full rounded shadow mt-1 bg-[#eddfd0] pointer-events-none
+                transition duration-200 ease-in-out opacity-0 ${isOpen ? 'opacity-100 pointer-events-auto z-10' : ''}`}>
+                {options.map((option) => (
+                    <li
+                        key={option.value}
+                        className="px-2 py-2 transition duration-200 hover:bg-[#fff9f3] text-[#827160]"
+                        onClick={() => handleSelect(option.value)}
+                    >
+                        {option.label}
+                    </li>
+                ))}
+            </ul>
         </div>
     )
 }

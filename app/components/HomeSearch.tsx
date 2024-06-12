@@ -76,7 +76,7 @@ export const HomeSearch = () => {
                     ring-1 ring-inset ring-transparent focus:ring-1 focus:ring-inset focus:ring-[#EDDFD0] hover:ring-[#EDDFD0]/50 sm:leading-6
                     transition duration-200 ease-in-out placeholder-[#eddfd0] ${s.hoverable}`} placeholder='Price' />
                 <div className={`${s.line}`} />
-                <button className={`mx-[18px] py-3 pl-2 grid place-items-center grid-cols-2 gap-1 rounded-3xl ${s.hoverable}`}>
+                <button className={`mx-[18px] py-3 pl-2 grid place-items-center grid-cols-2 gap-1 ${s.hoverable}`}>
                     Search
                     <Image src='/slim-properties/icons/search.svg' alt='Search icon' width={17} height={17} className='ml-[-20px]' />
                 </button>
