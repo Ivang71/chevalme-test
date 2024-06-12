@@ -4,16 +4,28 @@ import '@/app/ui/index.css'
 import Image from 'next/image'
 import s from '@/app/ui/main.module.css'
 import { useState, useLayoutEffect } from 'react'
-import { MuiInput } from '@/app/components'
+import { Select } from '@/app/components'
+// import { Select, SelectItem } from "@nextui-org/react"
+
+const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
+
+type DealType = 'buy' | 'rent'
 
 
 export const HomeSearch = () => {
+    const [isBuyDropdownOpen, setIsBuyDropdownOpen] = useState(false)
+    const [dealType, setDealType] = useState<DealType>('buy')
     const [isLargeScreen, setIsLargeScreen] = useState(false)
     const [projType, setProjType] = useState<'ready' | 'new'>('ready')
     const [cb, setCb] = useState('')
     const [location, setLocation] = useState('')
     const [price, setPrice] = useState('')
-    const [isBuyDropdownOpen, setIsBuyDropdownOpen] = useState(false);
+
+    const [selectedOption, setSelectedOption] = useState<'buy' | 'rent'>('buy')
+
+    const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedOption(e.target.value as 'buy' | 'rent')
+    }
 
     useLayoutEffect(() => {
         const handleResize = () => setIsLargeScreen(window.innerWidth >= 640)
@@ -25,19 +37,20 @@ export const HomeSearch = () => {
     return isLargeScreen ? (
         <>
             <div className='px-[3vw] sm:px-[85px] max-[639px]:mx-[3vw] mt-[400px] xl:mt-[200px] max-[639px]:w-full max-[639px]:text-center flex text-sm'>
-                <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] ${projType === 'ready'? 'border-b-[3px]': 'border-b'} border-solid border-[#eddfd0] ${s.hoverable} cursor-pointer`}
+                <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] ${projType === 'ready' ? 'border-b-[3px]' : 'border-b'} border-solid border-[#eddfd0] ${s.hoverable} cursor-pointer`}
                     onClick={() => setProjType('ready')}>Ready</div>
-                <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] ${projType === 'new'? 'border-b-[3px]': 'border-b'} border-solid border-[#eddfd0] ${s.hoverable} cursor-pointer`}
+                <div className={`max-[639px]:flex-1 pb-[8px] sm:min-w-[132px] ${projType === 'new' ? 'border-b-[3px]' : 'border-b'} border-solid border-[#eddfd0] ${s.hoverable} cursor-pointer`}
                     onClick={() => setProjType('new')}>New Projects</div>
             </div>
-            <div className='mt-[15px] ml-[-13px] px-[3vw] sm:px-[85px]  flex flex-wrap text-sm'>
-                <button className={`py-3 pl-2 grid place-items-center grid-cols-2 gap-1 rounded-3xl ${s.hoverable}`}>
-                    Buy
-                    <Image src='/slim-properties/icons/expand_more.svg' alt='Arrow down' width={32} height={32} className='ml-[-10px] mr-[12px]' />
-                </button>
+            <div className='mt-[15px] ml-[-13px] px-[3vw] sm:px-[85px] flex flex-wrap text-sm'>
+                <Select
+                    options={[{ value: 'rent', label: 'Rent' }, { value: 'buy', label: 'Buy' }]}
+                    value={dealType}
+                    onChange={(v) => setDealType(v as DealType)}
+                />
                 <input type="text" name="cb" id="cb_input" value={cb} onChange={(e) => setCb(e.target.value)} className={`mx-[11px] w-[200px] block border-0 py-1.5 bg-transparent
                     ring-1 ring-inset ring-transparent focus:ring-1 focus:ring-inset focus:ring-[#EDDFD0] hover:ring-[#EDDFD0]/50 sm:leading-6
-                    transition duration-200 ease-in-out placeholder-[#eddfd0] ${s.hoverable}`} placeholder='Community or Building'/>
+                    transition duration-200 ease-in-out placeholder-[#eddfd0] ${s.hoverable}`} placeholder='Community or Building' />
                 {/* <div className={`mr-[11px] relative m-4 max-w-[fit-content] group ${s.hoverable}`}>
                     <input type='text' className="outline-none px-3 py-3 peer ring-transparent bg-transparent border-0" placeholder=" " value={cb} onChange={(e) => setCb(e.target.value)} />
                     <label className="absolute left-[9px] top-px text-sm text-[#EDDFD0] transition-all duration-300 px-1 transform -translate-y-1/2 pointer-events-none 
@@ -57,11 +70,11 @@ export const HomeSearch = () => {
                 <div className={`${s.line}`} />
                 <input type="text" name="location" id="location_input" value={location} onChange={(e) => setLocation(e.target.value)} className={`mx-[11px] w-[200px] block border-0 py-1.5 bg-transparent
                     ring-1 ring-inset ring-transparent focus:ring-1 focus:ring-inset focus:ring-[#EDDFD0] hover:ring-[#EDDFD0]/50 sm:leading-6
-                    transition duration-200 ease-in-out placeholder-[#eddfd0] ${s.hoverable}`} placeholder='Location'/>
+                    transition duration-200 ease-in-out placeholder-[#eddfd0] ${s.hoverable}`} placeholder='Location' />
                 <div className={`${s.line}`} />
                 <input type="text" name="price" id="price_input" value={price} onChange={(e) => setPrice(e.target.value)} className={`mx-[11px] w-[200px] block border-0 py-1.5 bg-transparent
                     ring-1 ring-inset ring-transparent focus:ring-1 focus:ring-inset focus:ring-[#EDDFD0] hover:ring-[#EDDFD0]/50 sm:leading-6
-                    transition duration-200 ease-in-out placeholder-[#eddfd0] ${s.hoverable}`} placeholder='Price'/>
+                    transition duration-200 ease-in-out placeholder-[#eddfd0] ${s.hoverable}`} placeholder='Price' />
                 <div className={`${s.line}`} />
                 <button className={`mx-[18px] py-3 pl-2 grid place-items-center grid-cols-2 gap-1 rounded-3xl ${s.hoverable}`}>
                     Search
@@ -93,7 +106,7 @@ export const HomeSearch = () => {
                 <button className='mt-[26px] mx-auto px-[30px] py-[10px] w-[114px] flex gap-1 rounded-3xl bg-[#EDDFD0] hover:bg-white/30 text-[#916940]
                     active:bg-white/60 hover:text-gray-700 active:text-black transition duration-200 ease-in-out'>
                     Search
-                    <Image src='/slim-properties/icons/search_brown.svg' alt='Search icon' width={13} height={13} className='mt-[2px]'/>
+                    <Image src='/slim-properties/icons/search_brown.svg' alt='Search icon' width={13} height={13} className='mt-[2px]' />
                 </button>
             </div>
         </>
