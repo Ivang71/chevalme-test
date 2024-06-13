@@ -5,10 +5,15 @@ import '@/app/ui/index.css'
 import { PropertyCard } from '@/app/components'
 import Link from 'next/link'
 import s from '@/app/ui/main.module.css'
-import { useState, useLayoutEffect } from 'react'
+import { useState, useLayoutEffect, Fragment } from 'react'
+import useSWR from 'swr'
+import { apiUrl, fetcher } from '@/app/constants'
+import { Property } from '@/app/types'
+
 
 
 export const FeaturedProperties = () => {
+    const { data: properties, error, isLoading } = useSWR<Property[]>(apiUrl + '/api/get-featured-properties', fetcher)
     const [isLargeScreen, setIsLargeScreen] = useState(false)
     const [propType, setPropType] = useState<'villas' | 'apartments' | 'all'>('villas')
     const [action, setAction] = useState<'rent' | 'buy' | 'sell'>('buy')
@@ -30,14 +35,14 @@ export const FeaturedProperties = () => {
                 {isLargeScreen ? (
                     <div className='text-[12px] mt-0 sm:mt-[39px] flex-wrap'>
                         <div className='flex'>
-                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${propType === 'villas'? 'border-b-[3px]': 'border-b'}`} onClick={() => setPropType('villas')}>Villas</div>
-                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${propType === 'apartments'? 'border-b-[3px]': 'border-b'}`} onClick={() => setPropType('apartments')}>Apartments</div>
-                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${propType === 'all'? 'border-b-[3px]': 'border-b'}`} onClick={() => setPropType('all')}>View All</div>
+                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${propType === 'villas' ? 'border-b-[3px]' : 'border-b'}`} onClick={() => setPropType('villas')}>Villas</div>
+                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${propType === 'apartments' ? 'border-b-[3px]' : 'border-b'}`} onClick={() => setPropType('apartments')}>Apartments</div>
+                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${propType === 'all' ? 'border-b-[3px]' : 'border-b'}`} onClick={() => setPropType('all')}>View All</div>
                         </div>
                         <div className='flex mt-[17px]'>
-                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${action === 'rent'? 'border-b-[3px]': 'border-b'}`} onClick={() => setAction('rent')}>Rent</div>
-                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${action === 'buy'? 'border-b-[3px]': 'border-b'}`} onClick={() => setAction('buy')}>Buy</div>
-                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${action === 'sell'? 'border-b-[3px]': 'border-b'}`} onClick={() => setAction('sell')}>Sell</div>
+                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${action === 'rent' ? 'border-b-[3px]' : 'border-b'}`} onClick={() => setAction('rent')}>Rent</div>
+                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${action === 'buy' ? 'border-b-[3px]' : 'border-b'}`} onClick={() => setAction('buy')}>Buy</div>
+                            <div className={`border-solid border-[#eddfd0] ${s.prop} ${s.hoverable} ${action === 'sell' ? 'border-b-[3px]' : 'border-b'}`} onClick={() => setAction('sell')}>Sell</div>
                         </div>
                     </div>
                 ) : (
@@ -56,39 +61,20 @@ export const FeaturedProperties = () => {
                 )}
             </div>
             <div className='flex flex-wrap'>
-                <PropertyCard
-                    id='123testid456'
-                    imageUrl='/slim-properties/images/property.jpg'
-                    altText='Photo of a property'
-                    title='Canal View Villa'
-                    location='Vezul Residence, Business Bay.'
-                    bedrooms={2}
-                    bathrooms={2}
-                    area='1,273 sqft'
-                    price='AED 1,560.000'
-                />
-                <PropertyCard
-                    id='123testid456'
-                    imageUrl='/slim-properties/images/property.jpg'
-                    altText='Photo of a property'
-                    title='Canal View Villa'
-                    location='Vezul Residence, Business Bay.'
-                    bedrooms={2}
-                    bathrooms={2}
-                    area='1,273 sqft'
-                    price='AED 1,560.000'
-                />
-                <PropertyCard
-                    id='123testid456'
-                    imageUrl='/slim-properties/images/property.jpg'
-                    altText='Photo of a property'
-                    title='Canal View Villa'
-                    location='Vezul Residence, Business Bay.'
-                    bedrooms={2}
-                    bathrooms={2}
-                    area='1,273 sqft'
-                    price='AED 1,560.000'
-                />
+                {properties && properties.map((p: Property) => (
+                    <Fragment key={p.id}>
+                        <PropertyCard
+                            id={p.id}
+                            imageUrl={p.main_image}
+                            altText={`Photo of ${p.property_name}`}
+                            title={p.property_name}
+                            location={p.location}
+                            bedrooms={p.number_of_bedroom}
+                            bathrooms={p.number_of_bathroom}
+                            area={p.area_in_sqft}
+                            price={p.price} />
+                    </Fragment>
+                ))}
                 {isLargeScreen ? (
                     <div className='mt-[43px] w-full sm:w-[304px]'>
                         <div className={`${s.lastProperty}`}>

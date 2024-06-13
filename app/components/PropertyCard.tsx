@@ -6,16 +6,16 @@ import s from '@/app/ui/main.module.css'
 import { useState, useLayoutEffect } from 'react'
 
 interface PropertyCardProps {
-    id: string
-    imageUrl: string
+    id: number
+    imageUrl: string | null
     altText: string
     title: string
     description?: string
     location: string
     bedrooms: number
-    bathrooms: number
+    bathrooms: string
     area: string
-    price: string
+    price: number
 }
 
 export const PropertyCard = (props: PropertyCardProps) => {
@@ -31,7 +31,7 @@ export const PropertyCard = (props: PropertyCardProps) => {
     return (
         <div className={`${isLargeScreen ? s.propPic : ''} mt-[43px] w-full sm:w-[304px]`}>
             <Link href={`/project?id=${props.id}`}>
-                <Image src={props.imageUrl} alt={props.altText} width={304} height={293} className='max-[639px]:w-full'/>
+                <Image src={props.imageUrl || ''} alt={props.altText} width={304} height={293} className='max-[639px]:w-full'/>
             </Link>
             <div className='mt-[15px] ml-[10px]'>
                 <div className=' text-[15px] font-[700]'>{props.title}</div>
@@ -51,7 +51,7 @@ export const PropertyCard = (props: PropertyCardProps) => {
                         {props.area} sqft
                     </div>
                 </div>
-                <div className='text-[15px] mt-[3px] font-[700]'>{props.price}</div>
+                <div className='text-[15px] mt-[3px] font-[700]'>AED {props.price.toLocaleString('en-US', { minimumIntegerDigits: 2, maximumFractionDigits: 2 }) + '.000'}</div>
             </div>
         </div>
     )
