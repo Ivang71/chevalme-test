@@ -31,81 +31,92 @@ export default async function ReadyProjectsPage() {
             </div>
             <div className='mt-[9px] flex flex-wrap'>
                 <PropertyCard
-                    id='123testid456'
+                    id={2}
                     imageUrl='/slim-properties/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
                     location='Vezul Residence, Business Bay.'
                     bedrooms={2}
-                    bathrooms={2}
+                    bathrooms='2'
                     area='1,273 sqft'
-                    price='AED 1,560.000'
+                    price={1560}
                 />
                 <PropertyCard
-                    id='123testid456'
+                    id={2}
                     imageUrl='/slim-properties/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
                     location='Vezul Residence, Business Bay.'
                     bedrooms={2}
-                    bathrooms={2}
+                    bathrooms='2'
                     area='1,273 sqft'
-                    price='AED 1,560.000'
+                    price={1560}
                 />
                 <PropertyCard
-                    id='123testid456'
+                    id={2}
                     imageUrl='/slim-properties/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
                     location='Vezul Residence, Business Bay.'
                     bedrooms={2}
-                    bathrooms={2}
+                    bathrooms='2'
                     area='1,273 sqft'
-                    price='AED 1,560.000'
+                    price={1560}
                 />
                 <PropertyCard
-                    id='123testid456'
+                    id={2}
                     imageUrl='/slim-properties/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
                     location='Vezul Residence, Business Bay.'
                     bedrooms={2}
-                    bathrooms={2}
+                    bathrooms='2'
                     area='1,273 sqft'
-                    price='AED 1,560.000'
+                    price={1560}
                 />
                 <PropertyCard
-                    id='123testid456'
+                    id={2}
                     imageUrl='/slim-properties/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
                     location='Vezul Residence, Business Bay.'
                     bedrooms={2}
-                    bathrooms={2}
+                    bathrooms='2'
                     area='1,273 sqft'
-                    price='AED 1,560.000'
+                    price={1560}
                 />
                 <PropertyCard
-                    id='123testid456'
+                    id={2}
                     imageUrl='/slim-properties/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
                     location='Vezul Residence, Business Bay.'
                     bedrooms={2}
-                    bathrooms={2}
+                    bathrooms='2'
                     area='1,273 sqft'
-                    price='AED 1,560.000'
+                    price={1560}
                 />
                 <PropertyCard
-                    id='123testid456'
+                    id={2}
                     imageUrl='/slim-properties/images/property.jpg'
                     altText='Photo of a property'
                     title='Canal View Villa'
                     location='Vezul Residence, Business Bay.'
                     bedrooms={2}
-                    bathrooms={2}
+                    bathrooms='2'
                     area='1,273 sqft'
-                    price='AED 1,560.000'
+                    price={1560}
+                />
+                <PropertyCard
+                    id={2}
+                    imageUrl='/slim-properties/images/property.jpg'
+                    altText='Photo of a property'
+                    title='Canal View Villa'
+                    location='Vezul Residence, Business Bay.'
+                    bedrooms={2}
+                    bathrooms='2'
+                    area='1,273 sqft'
+                    price={1560}
                 />
             </div>
         </div>
