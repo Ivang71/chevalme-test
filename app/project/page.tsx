@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation'
 import s from '@/app/ui/main.module.css'
 import { Suspense } from 'react'
 import { GoogleMapsEmbed } from '@next/third-parties/google'
+import { gmapsApiKey } from '@/app/constants'
 
 export default function ProjectPage() {
     return (
@@ -113,7 +114,7 @@ function ProjectComponent() {
             <div className='mb-[44px] py-[46px] w-full flex flex-wrap gap-[65px] border-b border-solid border-[#EDDFD0] border-opacity-50'>
                 <div className='w-full md:w-[651px]'>
                     <GoogleMapsEmbed
-                        apiKey="AIzaSyAS49hXHr0hePqJdzalBGh3iTOuDrgXX00"
+                        apiKey={gmapsApiKey}
                         height={280}
                         width="100%"
                         mode="place"

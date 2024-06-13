@@ -2,6 +2,8 @@ import Image from 'next/image'
 import { GoogleMapsEmbed } from '@next/third-parties/google'
 import '@/app/ui/index.css'
 import { EnquireForm } from '@/app/components'
+import { gmapsApiKey } from '@/app/constants'
+
 
 export default async function Contact() {
     return (
@@ -29,7 +31,7 @@ export default async function Contact() {
                 </div>
                 <div className='w-full max-[890px]-w-[872px]'>
                     <GoogleMapsEmbed
-                        apiKey="AIzaSyAS49hXHr0hePqJdzalBGh3iTOuDrgXX00"
+                        apiKey={gmapsApiKey}
                         height={366}
                         width="100%"
                         mode="place"
