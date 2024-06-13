@@ -13,7 +13,6 @@ type DealType = 'buy' | 'rent'
 
 
 export const HomeSearch = () => {
-    const [isBuyDropdownOpen, setIsBuyDropdownOpen] = useState(false)
     const [dealType, setDealType] = useState<DealType>('buy')
     const [isLargeScreen, setIsLargeScreen] = useState(false)
     const [projType, setProjType] = useState<'ready' | 'new'>('ready')

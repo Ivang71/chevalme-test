@@ -1,10 +1,18 @@
 'use client'
 
 import { useState } from 'react'
+import useSWR from 'swr'
+import { apiUrl, fetcher } from '@/app/constants'
+
+interface Response {
+    status: string
+    message: string
+}
 
 
 export const FooterEmailForm = () => {
     const [email, setEmail] = useState('')
+    // const { data: submittionResponse, error, isLoading } = useSWR<Response>(apiUrl + '/api/search', fetcher)
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
