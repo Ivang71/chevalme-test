@@ -37,6 +37,26 @@ const useMenuState = () => {
 
 
 export const Header = () => {
+    const [isVisible, setIsVisible] = useState(true)
+    const stickyHeaderRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        const handleScroll = () => setIsVisible(window.scrollY < 2900)
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
+    useEffect(() => {
+        if (isVisible && stickyHeaderRef.current) { // Check both visibility and ref
+            gsap.to(stickyHeaderRef.current, { duration: 0.5, y: 0, ease: "power3.inOut" }) // Show header
+        } else if (!isVisible && stickyHeaderRef.current) {
+            gsap.to(stickyHeaderRef.current, { duration: 0.5, y: -stickyHeaderRef.current.offsetHeight, ease: "power3.inOut" }) // Hide header
+        }
+    }, [isVisible])
+
+    
     const path = usePathname()
     const [isLargeScreen, setIsLargeScreen] = useState(false)
     const { isOpen, toggleMenu } = useMenuState()
@@ -49,7 +69,7 @@ export const Header = () => {
     }, [])
 
     return isLargeScreen ? (
-        <div className={` mb-[50px] sm:mb-0 px-[3vw] sm:px-[85px] h-[340px] pt-[30px] lg:pt-[89px] flex lg:flex-col`}>
+        <div ref={stickyHeaderRef} className={`sticky top-0 mb-[50px] sm:mb-0 px-[3vw] sm:px-[85px] h-[340px] pt-[30px] lg:pt-[89px] flex lg:flex-col`}>
             <Link href='/' className='w-fit'>
                 <Image src='/slim-properties/logos/slim.svg' alt='Slim Properties logo' width={142} height={71} className='ml-[-4px]' />
             </Link>
@@ -95,6 +115,46 @@ export const Header = () => {
                     ))}
                 </nav>
             </div>
+        </div>
+    )
+}
+
+
+import styles from '@/app/ui/home.module.css'
+import React, { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+
+const Header2 = () => {
+    const [isVisible, setIsVisible] = useState(true)
+    const stickyHeaderRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        const handleScroll = () => setIsVisible(window.scrollY < 2800)
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
+    useEffect(() => {
+        if (isVisible && stickyHeaderRef.current) { // Check both visibility and ref
+            gsap.to(stickyHeaderRef.current, { duration: 0.5, y: 0, ease: "power3.inOut" }) // Show header
+        } else if (!isVisible && stickyHeaderRef.current) {
+            gsap.to(stickyHeaderRef.current, { duration: 0.5, y: -stickyHeaderRef.current.offsetHeight, ease: "power3.inOut" }) // Hide header
+        }
+    }, [isVisible])
+
+
+    return (
+        <div ref={stickyHeaderRef} className={`h-[340px] sticky top-0 pt-[89px] px-[85px]`}>
+            <Image src='/chevalme-test/texts/slim.svg' alt='Slim Properties logo' width={142} height={71} className='ml-[-4px]' />
+            <nav className='mt-[57px] flex gap-[38px] text-sm'>
+                <div className={styles.navActive}>Home</div>
+                <div>About</div>
+                <div>Properties</div>
+                <div>Services</div>
+                <div>Contact</div>
+            </nav>
         </div>
     )
 }

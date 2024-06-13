@@ -41,3 +41,11 @@ body {
     overflow-x: hidden;
 }
 
+.horizontalSection {
+    display: flex;
+    /* overflow: hidden; */
+}
+
+.horizontalPanel {
+    flex: 1 0 100%;
+}
