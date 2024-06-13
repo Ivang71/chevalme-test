@@ -37,9 +37,12 @@ interface FormData {
     message: string
 }
 
+interface EnquireFormProps {
+    hasUploadField?: boolean
+}
 
 
-export const EnquireForm = () => {
+export const EnquireForm = ({ hasUploadField = false }: EnquireFormProps) => {
     const [formData, setFormData] = useState<FormData>({
         name: '',
         email: '',
@@ -129,24 +132,26 @@ export const EnquireForm = () => {
                                 focus:ring-1 focus:ring-inset focus:ring-white sm:leading-6 transition duration-200 ease-in-out`} />
                     </div>
                 </div>
-                <label className='mt-[28px] block text-sm font-medium leading-6' htmlFor="upload-cv">
-                    <div>Upload CV</div>
-                    <div className='pb-[28px] xl:w-[1220px] sm:w-[584px] flex justify-between items-baseline py-1.5 bg-transparent shadow-[white_0px_1px_0_0] ring-1 ring-inset ring-transparent
+                {hasUploadField ? (
+                    <label className='mt-[28px] block text-sm font-medium leading-6' htmlFor="upload-cv">
+                        <div>Upload CV</div>
+                        <div className='pb-[28px] xl:w-[1220px] sm:w-[584px] flex justify-between items-baseline py-1.5 bg-transparent shadow-[white_0px_1px_0_0] ring-1 ring-inset ring-transparent
                             focus:ring-1 focus:ring-inset focus:ring-white sm:leading-6 transition duration-200 ease-in-out cursor-pointer'>
-                        <span>{selectedFile}</span>
-                        <button type="submit" className='px-[50px] py-[15px] rounded-3xl border border-solid border-[#EDDFD0] text-sm hover:bg-white/30
+                            <span>{selectedFile}</span>
+                            <button type="submit" className='px-[50px] py-[15px] rounded-3xl border border-solid border-[#EDDFD0] text-sm hover:bg-white/30
                             active:bg-white/60 hover:text-gray-700 active:text-black transition duration-200 ease-in-out'>
-                            Upload
-                        </button>
-                    </div>
-                    <input
-                        type="file"
-                        id="upload-cv"
-                        name="upload-cv"
-                        onChange={handleFileSelect}
-                        className='hidden'
-                    />
-                </label>
+                                Upload
+                            </button>
+                        </div>
+                        <input
+                            type="file"
+                            id="upload-cv"
+                            name="upload-cv"
+                            onChange={handleFileSelect}
+                            className='hidden'
+                        />
+                    </label>
+                ) : null}
                 <div className='mt-[33px]'>
                     <label htmlFor="message" className="text-sm font-medium leading-6">Your Message</label>
                     <div className="mt-2">

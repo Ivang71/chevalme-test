@@ -44,7 +44,7 @@ export default async function CareersPage() {
                 <div id='apply'>Apply</div>
                 <div>Now</div>
             </div>
-            <EnquireForm />
+            <EnquireForm hasUploadField />
         </div>
     )
 }
