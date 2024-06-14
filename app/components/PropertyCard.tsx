@@ -4,6 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import s from '@/app/ui/main.module.css'
 import { useState, useLayoutEffect } from 'react'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 interface PropertyCardProps {
     id: number
@@ -19,6 +21,7 @@ interface PropertyCardProps {
 }
 
 export const PropertyCard = (props: PropertyCardProps) => {
+    const [imageLoaded, setImageLoaded] = useState(false)
     const [isLargeScreen, setIsLargeScreen] = useState(false)
 
     useLayoutEffect(() => {
@@ -30,8 +33,10 @@ export const PropertyCard = (props: PropertyCardProps) => {
 
     return (
         <div className={`${isLargeScreen ? s.propPic : ''} mt-[43px] w-full sm:w-[304px]`}>
-            <Link href={`/project?id=${props.id}`}>
-                <Image src={props.imageUrl || ''} alt={props.altText} width={304} height={293} className='max-[639px]:w-full w-[304px] h-[293px] object-cover'/>
+            <Link href={`/project?id=${props.id} relative`}>
+                <Image src={props.imageUrl || ''} alt={props.altText} width={304} height={293} onLoadingComplete={() => setImageLoaded(true)}
+                    className={`absolute max-[639px]:w-full w-[304px] h-[293px] object-cover transition-opacity ${(!imageLoaded) ? 'opacity-0' : 'opacity-100'}}`} />
+                <Skeleton className={`absolute top-[-5px] transition-opacity ${imageLoaded? 'opacity-0' : ''}`} width={304} height={293} baseColor='#948270' highlightColor='#baa791'/>
             </Link>
             <div className='mt-[15px] ml-[10px]'>
                 <div className=' text-[15px] font-[700]'>{props.title}</div>
