@@ -2,6 +2,7 @@ import '@/app/ui/global.css'
 import Image from 'next/image'
 import { Metadata } from 'next'
 import { Header, Footer, SmoothScrolling } from '@/app/components'
+import { Analytics } from './components'
 
 export const metadata: Metadata = {
     title: 'Slim Properties',
@@ -12,6 +13,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
+        <head>
+            <Analytics/>
+        </head>
             <body>
                 <div className='text-[#eddfd0] helveticaNeue font-[200]'>
                     <Header />

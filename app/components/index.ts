@@ -15,3 +15,5 @@ export { HomeSearch } from './HomeSearch'
 export { FooterEmailForm } from './FooterEmailForm'
 export { MuiInput } from './MuiInput'
 export { Select } from './Select'
+export { Analytics } from './Analytics'
+
